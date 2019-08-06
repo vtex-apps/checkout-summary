@@ -1,5 +1,10 @@
 {
-  "base-store-component": {
-    "component": "Example"
+  "checkout-summary": {
+    "component": "Summary",
+    "allowed": ["coupon"]
   }
 }
+
+
+
+
