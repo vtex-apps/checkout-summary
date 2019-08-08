@@ -28,7 +28,7 @@ const Summary: StorefrontFunctionComponent<SummaryProps> = () => {
         <div className="w-40 pa2 tr">$100000202</div>
       </div>
 
-      <div className="b--black-20 bt ph4 pv4">
+      <div className="bg-near-white b--black-20 bt ph4 pv4">
         <div className="flex">
           <div className="fl w-60 pa2 b">Total</div>
           <div className="w-40 pa2 tr">$100000202</div>
