@@ -5,7 +5,6 @@ import { Button } from 'vtex.styleguide'
 import styles from './styles.css'
 
 const Summary: StorefrontFunctionComponent<SummaryProps> = () => {
-
   return (
     <div className={`${styles.container} flex-column pv6 ph4`}>
       <h3 className="mid-gray ph4">Summary</h3>
@@ -38,7 +37,6 @@ const Summary: StorefrontFunctionComponent<SummaryProps> = () => {
           <Button variation="primary" size="large" block>CHECKOUT</Button>
         </div>
       </div>
-
     </div>
   )
 }

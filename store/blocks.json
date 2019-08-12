@@ -1,5 +1,5 @@
 {
-    "checkout-summary": {
-        "blocks": ["coupon"]
-    }
+  "checkout-summary": {
+    "blocks": ["coupon"]
+  }
 }
