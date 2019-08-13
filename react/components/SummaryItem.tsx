@@ -5,20 +5,25 @@ interface Props {
   label: string
   large: boolean
   value: number
+  currency: string
 }
 
-const SummaryItem: FunctionComponent<Props> = ({ label, large, value, }) => (
-  <div className={`flex w-100 bt b--muted-3 c-on-base items-center ${large ? 'f4': ''}`}>
-    <div className="flex-none pa5 fw5">
-      {label}
-    </div>
-    <div className={`flex-auto pr5 tr ${large ? 'fw5': ''}`}>
-      <FormattedPrice currency="USD" value={value} />
+const SummaryItem: FunctionComponent<Props> = ({
+  label,
+  large,
+  value,
+  currency,
+}) => (
+  <div
+    className={`flex w-100 bt b--muted-3 c-on-base items-center ${
+      large ? 'f4' : ''
+    }`}
+  >
+    <div className="flex-none pa5 fw5">{label}</div>
+    <div className={`flex-auto pr5 tr ${large ? 'fw5' : ''}`}>
+      <FormattedPrice currency={currency} value={value} />
     </div>
   </div>
 )
-
-interface Props {
-}
 
 export default SummaryItem
