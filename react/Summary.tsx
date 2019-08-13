@@ -1,40 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { ExtensionPoint } from 'vtex.render-runtime'
 import { Button } from 'vtex.styleguide'
-
-import styles from './styles.css'
+import SummaryItem from './components/SummaryItem'
 
 const Summary: StorefrontFunctionComponent<SummaryProps> = () => {
+
   return (
-    <div className={`${styles.container} flex-column pv6 ph4`}>
-      <h3 className="mid-gray ph4">Summary</h3>
-      <br></br>
-      <div className="flex ph4 pv4"> 
-        <div className="fl w-60 pa2 b">Subtotal</div>
-        <div className="w-40 pa2 tr">$100000202</div>
-      </div>
-
-      <div className="b--black-20 bt ph4">
-        <p className="b">Delivery</p>
-      </div>
-
+    <div>
+      <SummaryItem label="Subtotal" value={39999} large={false} />
+      <SummaryItem label="Delivery" value={5000} large={false} />
+      <SummaryItem label="Promo Code" value={0} large={false} />
       <div className="b--black-20 bt ph4">
         <ExtensionPoint id="coupon"/>
       </div>
+      <SummaryItem label="Tax" value={3000} large={false} />
 
-      <div className="b--black-20 bt flex ph4 pv4">
-        <div className="fl w-60 pa2 b">Tax</div>
-        <div className="w-40 pa2 tr">$100000202</div>
-      </div>
+      <div className="pb6 bg-muted-5">
+        <SummaryItem label="Total" value={47999} large={true} />
 
-      <div className="bg-near-white b--black-20 bt ph4 pv4">
-        <div className="flex">
-          <div className="fl w-60 pa2 b">Total</div>
-          <div className="w-40 pa2 tr">$100000202</div>
-        </div>
-
-        <div className="pv4">
-          <Button variation="primary" size="large" block>CHECKOUT</Button>
+        <div className="ph5">
+          <Button variation="primary" size="large" block>Checkout</Button>
         </div>
       </div>
     </div>
@@ -42,7 +27,8 @@ const Summary: StorefrontFunctionComponent<SummaryProps> = () => {
 }
 
 interface SummaryProps {
-  title?: string
+  title?: string,
+  intl: object,
 }
 
 Summary.schema = {
