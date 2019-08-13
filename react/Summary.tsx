@@ -1,25 +1,30 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { ExtensionPoint } from 'vtex.render-runtime'
 import { Button } from 'vtex.styleguide'
 import SummaryItem from './components/SummaryItem'
 
-const Summary: StorefrontFunctionComponent<SummaryProps> = () => {
-
+const Summary: StorefrontFunctionComponent<SummaryProps> = ({
+  subtotal,
+  tax,
+  total,
+}) => {
   return (
     <div>
-      <SummaryItem label="Subtotal" value={39999} large={false} />
+      <SummaryItem label="Subtotal" value={subtotal} large={false} />
       <SummaryItem label="Delivery" value={5000} large={false} />
-      <SummaryItem label="Promo Code" value={0} large={false} />
+
       <div className="b--black-20 bt ph4">
-        <ExtensionPoint id="coupon"/>
+        <ExtensionPoint id="coupon" />
       </div>
-      <SummaryItem label="Tax" value={3000} large={false} />
+      <SummaryItem label="Tax" value={tax} large={false} />
 
       <div className="pb6 bg-muted-5">
-        <SummaryItem label="Total" value={47999} large={true} />
+        <SummaryItem label="Total" value={total} large />
 
         <div className="ph5">
-          <Button variation="primary" size="large" block>Checkout</Button>
+          <Button variation="primary" size="large" block>
+            Checkout
+          </Button>
         </div>
       </div>
     </div>
@@ -27,8 +32,11 @@ const Summary: StorefrontFunctionComponent<SummaryProps> = () => {
 }
 
 interface SummaryProps {
-  title?: string,
-  intl: object,
+  title?: string
+  intl: object
+  subtotal: number
+  tax: number
+  total: number
 }
 
 Summary.schema = {
