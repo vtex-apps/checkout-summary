@@ -15,12 +15,12 @@ const SummaryItem: FunctionComponent<Props> = ({
   currency,
 }) => (
   <div
-    className={`flex w-100 bt b--muted-3 c-on-base items-center ${
-      large ? 'f4' : ''
+    className={`flex w-100 c-on-base lh-copy items-center ${
+      large ? 'f4 mt4 pb6' : 'mt3'
     }`}
   >
-    <div className="flex-none pa5 fw5">{label}</div>
-    <div className={`flex-auto pr5 tr ${large ? 'fw5' : ''}`}>
+    <div className="flex-none fw6 fw5-l">{label}</div>
+    <div className={`flex-auto tr ${large ? 'fw6 fw5-l' : ''}`}>
       <FormattedPrice currency={currency} value={value} />
     </div>
   </div>

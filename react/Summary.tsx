@@ -12,7 +12,11 @@ const Summary: StorefrontFunctionComponent<SummaryProps> = ({
   currency,
 }) => {
   return (
-    <div>
+    <div className="ph5 ph0-l">
+
+      <h5 className="t-heading-5 mt6 mb6 mt5-l">Summary</h5>
+      <ExtensionPoint id="coupon" />
+
       <SummaryItem
         label="Subtotal"
         value={subtotal ? subtotal : minTotalizerValue}
@@ -25,10 +29,6 @@ const Summary: StorefrontFunctionComponent<SummaryProps> = ({
         large={false}
         currency={currency}
       />
-
-      <div className="b--black-20 bt ph4">
-        <ExtensionPoint id="coupon" />
-      </div>
       <SummaryItem
         label="Tax"
         value={tax ? tax : minTotalizerValue}
@@ -36,20 +36,16 @@ const Summary: StorefrontFunctionComponent<SummaryProps> = ({
         currency={currency}
       />
 
-      <div className="pb6 bg-muted-5">
-        <SummaryItem
-          label="Total"
-          value={total ? total : minTotalizerValue}
-          large
-          currency={currency}
-        />
+      <SummaryItem
+        label="Total"
+        value={total ? total : minTotalizerValue}
+        large
+        currency={currency}
+      />
 
-        <div className="ph5">
-          <Button variation="primary" size="large" block>
-            Checkout
-          </Button>
-        </div>
-      </div>
+      <Button variation="primary" size="large" block>
+        Checkout
+      </Button>
     </div>
   )
 }
