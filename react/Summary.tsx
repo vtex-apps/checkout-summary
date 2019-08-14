@@ -14,7 +14,7 @@ const Summary: StorefrontFunctionComponent<SummaryProps> = ({
   return (
     <div className="ph5 ph0-l">
 
-      <h5 className="t-heading-5 mt6 mb6 mt5-l">Summary</h5>
+      <h5 className="t-heading-5 mt6 mb6 mt8-m pt8-m">Summary</h5>
       <ExtensionPoint id="coupon" />
 
       <SummaryItem
