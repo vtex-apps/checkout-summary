@@ -5,7 +5,7 @@ import SummaryItem from './components/SummaryItem'
 
 const minTotalizerValue = 0
 
-const getTotalizerById = (id, totalizers) => {
+const getTotalizerById = (id: string, totalizers: Totalizer[]) => {
   return totalizers.filter(totalizer => {
     return totalizer.id === id
   })
@@ -22,7 +22,6 @@ const Summary: StorefrontFunctionComponent<SummaryProps> = ({
 
   return (
     <div className="ph5 ph0-l">
-
       <h5 className="t-heading-5 mt6 mb6 mt8-l pt8-l">Summary</h5>
       <ExtensionPoint id="coupon" />
 
@@ -65,6 +64,10 @@ interface SummaryProps {
   totalizers: any[]
   total: number
   currency: string
+}
+
+Summary.defaultProps = {
+  totalizers: [],
 }
 
 Summary.schema = {
