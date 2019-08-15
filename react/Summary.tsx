@@ -16,21 +16,21 @@ const Summary: StorefrontFunctionComponent<SummaryProps> = ({
   total,
   currency,
 }) => {
-  const subtotal = getTotalizerById('Items', totalizers)[0].value
-  const delivery = getTotalizerById('Shipping', totalizers)[0].value
-  const tax = getTotalizerById('CustomTax', totalizers)[0].value
+  const subtotal = getTotalizerById('Items', totalizers)
+  const delivery = getTotalizerById('Shipping', totalizers)
+  const tax = getTotalizerById('CustomTax', totalizers)
 
   return (
     <div>
       <SummaryItem
         label="Subtotal"
-        value={subtotal ? subtotal : minTotalizerValue}
+        value={subtotal[0] ? subtotal[0].value : minTotalizerValue}
         large={false}
         currency={currency}
       />
       <SummaryItem
         label="Delivery"
-        value={delivery ? delivery : minTotalizerValue}
+        value={delivery[0] ? delivery[0].value : minTotalizerValue}
         large={false}
         currency={currency}
       />
@@ -40,7 +40,7 @@ const Summary: StorefrontFunctionComponent<SummaryProps> = ({
       </div>
       <SummaryItem
         label="Tax"
-        value={tax ? tax : minTotalizerValue}
+        value={tax[0] ? tax[0].value : minTotalizerValue}
         large={false}
         currency={currency}
       />
