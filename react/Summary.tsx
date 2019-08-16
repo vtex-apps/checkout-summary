@@ -29,14 +29,14 @@ const Summary: StorefrontFunctionComponent<SummaryProps> = ({
       <h5 className="t-heading-5 mt6 mb6 mt8-l pt8-l">Summary</h5>
       <ExtensionPoint id="coupon" />
 
-      {totalizers.map(totalizer => {
-        ;<SummaryItem
+      {totalizers.map(totalizer => (
+        <SummaryItem
           label={getTotalizerId(totalizer.id)}
           value={(totalizer && totalizer.value) || minTotalizerValue}
           large={false}
           currency={currency}
         />
-      })}
+      ))}
 
       <SummaryItem
         label="Total"
