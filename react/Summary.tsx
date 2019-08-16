@@ -4,6 +4,12 @@ import { Button } from 'vtex.styleguide'
 import SummaryItem from './components/SummaryItem'
 
 const minTotalizerValue = 0
+const shippingData = {
+  id: 'Shipping',
+  name: 'Total do Frete',
+  value: minTotalizerValue,
+  __typename: 'Totalizer',
+}
 
 const getTotalizerId = (id: string) => {
   let customizedId = id
@@ -19,11 +25,27 @@ const getTotalizerId = (id: string) => {
   return customizedId
 }
 
+const isShippingPresent = (totalizers: Totalizer[]) => {
+  let result = false
+
+  for (let totalizer of totalizers) {
+    if (totalizer.id === 'Shipping') {
+      result = true
+    }
+  }
+
+  return result
+}
+
 const Summary: StorefrontFunctionComponent<SummaryProps> = ({
   totalizers,
   total,
   currency,
 }) => {
+  if (!isShippingPresent(totalizers)) {
+    totalizers.push(shippingData)
+  }
+
   return (
     <div className="ph5 ph0-m">
       <h5 className="t-heading-5 mt6 mb6 mt8-l pt8-l">Summary</h5>
