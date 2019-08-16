@@ -5,10 +5,18 @@ import SummaryItem from './components/SummaryItem'
 
 const minTotalizerValue = 0
 
-const getTotalizerById = (id: string, totalizers: Totalizer[]) => {
-  return totalizers.filter(totalizer => {
-    return totalizer.id === id
-  })
+const getTotalizerId = (id: string) => {
+  let customizedId = id
+
+  if (id === 'Items') {
+    customizedId = 'Subtotal'
+  } else if (id === 'Shipping') {
+    customizedId = 'Delivery'
+  } else if (id === 'CustomTax') {
+    customizedId = 'Tax'
+  }
+
+  return customizedId
 }
 
 const Summary: StorefrontFunctionComponent<SummaryProps> = ({
@@ -16,33 +24,19 @@ const Summary: StorefrontFunctionComponent<SummaryProps> = ({
   total,
   currency,
 }) => {
-  const subtotal = getTotalizerById('Items', totalizers)
-  const delivery = getTotalizerById('Shipping', totalizers)
-  const tax = getTotalizerById('CustomTax', totalizers)
-
   return (
     <div className="ph5 ph0-l">
       <h5 className="t-heading-5 mt6 mb6 mt8-l pt8-l">Summary</h5>
       <ExtensionPoint id="coupon" />
 
-      <SummaryItem
-        label="Subtotal"
-        value={subtotal[0] ? subtotal[0].value : minTotalizerValue}
-        large={false}
-        currency={currency}
-      />
-      <SummaryItem
-        label="Delivery"
-        value={delivery[0] ? delivery[0].value : minTotalizerValue}
-        large={false}
-        currency={currency}
-      />
-      <SummaryItem
-        label="Tax"
-        value={tax[0] ? tax[0].value : minTotalizerValue}
-        large={false}
-        currency={currency}
-      />
+      {totalizers.map(totalizer => {
+        ;<SummaryItem
+          label={getTotalizerId(totalizer.id)}
+          value={(totalizer && totalizer.value) || minTotalizerValue}
+          large={false}
+          currency={currency}
+        />
+      })}
 
       <SummaryItem
         label="Total"
@@ -68,6 +62,7 @@ interface SummaryProps {
 
 Summary.defaultProps = {
   totalizers: [],
+  total: minTotalizerValue,
 }
 
 Summary.schema = {
