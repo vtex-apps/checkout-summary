@@ -12,17 +12,16 @@ const shippingData = {
 }
 
 const getTotalizerId = (id: string) => {
-  let customizedId = id
-
-  if (id === 'Items') {
-    customizedId = 'Subtotal'
-  } else if (id === 'Shipping') {
-    customizedId = 'Delivery'
-  } else if (id === 'CustomTax') {
-    customizedId = 'Tax'
+  switch (id) {
+    case 'Items':
+      return 'Subtotal'
+    case 'Shipping':
+      return 'Delivery'
+    case 'CustomTax':
+      return 'Tax'
+    default:
+      return id
   }
-
-  return customizedId
 }
 
 const isShippingPresent = (totalizers: Totalizer[]) => {
@@ -40,7 +39,6 @@ const isShippingPresent = (totalizers: Totalizer[]) => {
 const Summary: StorefrontFunctionComponent<SummaryProps> = ({
   totalizers,
   total,
-  currency,
 }) => {
   if (!isShippingPresent(totalizers)) {
     totalizers.push(shippingData)
@@ -53,10 +51,10 @@ const Summary: StorefrontFunctionComponent<SummaryProps> = ({
 
       {totalizers.map(totalizer => (
         <SummaryItem
+          key={totalizer.id}
           label={getTotalizerId(totalizer.id)}
           value={(totalizer && totalizer.value) || minTotalizerValue}
           large={false}
-          currency={currency}
         />
       ))}
 
@@ -64,7 +62,6 @@ const Summary: StorefrontFunctionComponent<SummaryProps> = ({
         label="Total"
         value={total ? total : minTotalizerValue}
         large
-        currency={currency}
       />
 
       <Button variation="primary" size="large" block>
@@ -79,7 +76,6 @@ interface SummaryProps {
   intl: object
   totalizers: any[]
   total: number
-  currency: string
 }
 
 Summary.defaultProps = {

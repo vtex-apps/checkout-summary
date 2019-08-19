@@ -15,7 +15,7 @@ const SummaryItem: FunctionComponent<Props> = ({ label, large, value }) => (
   >
     <div className="flex-none fw6 fw5-l">{label}</div>
     <div className={`flex-auto tr ${large ? 'fw6 fw5-l' : ''}`}>
-      <FormattedCurrency value={value} />
+      <FormattedCurrency value={value / 100} />
     </div>
   </div>
 )
