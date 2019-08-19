@@ -11,19 +11,6 @@ const shippingData = {
   __typename: 'Totalizer',
 }
 
-const getTotalizerId = (id: string) => {
-  switch (id) {
-    case 'Items':
-      return 'Subtotal'
-    case 'Shipping':
-      return 'Delivery'
-    case 'CustomTax':
-      return 'Tax'
-    default:
-      return id
-  }
-}
-
 const isShippingPresent = (totalizers: Totalizer[]) => {
   let result = false
 
@@ -52,7 +39,8 @@ const Summary: StorefrontFunctionComponent<SummaryProps> = ({
       {totalizers.map(totalizer => (
         <SummaryItem
           key={totalizer.id}
-          label={getTotalizerId(totalizer.id)}
+          label={totalizer.id}
+          name={totalizer.id === 'CustomTax' ? totalizer.name : ''}
           value={(totalizer && totalizer.value) || minTotalizerValue}
           large={false}
         />
@@ -81,20 +69,6 @@ interface SummaryProps {
 Summary.defaultProps = {
   totalizers: [],
   total: minTotalizerValue,
-}
-
-Summary.schema = {
-  title: 'editor.base-store-component.title',
-  description: 'editor.base-store-component.description',
-  type: 'object',
-  properties: {
-    title: {
-      title: 'editor.base-store-component.title.title',
-      description: 'editor.base-store-component.title.description',
-      type: 'string',
-      default: null,
-    },
-  },
 }
 
 export default Summary
