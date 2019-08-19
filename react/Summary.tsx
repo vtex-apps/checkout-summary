@@ -1,62 +1,74 @@
 import React from 'react'
 import { ExtensionPoint } from 'vtex.render-runtime'
 import { Button } from 'vtex.styleguide'
+import SummaryItem from './components/SummaryItem'
 
-import styles from './styles.css'
+const minTotalizerValue = 0
+const shippingData = {
+  id: 'Shipping',
+  name: 'Total do Frete',
+  value: minTotalizerValue,
+  __typename: 'Totalizer',
+}
 
-const Summary: StorefrontFunctionComponent<SummaryProps> = () => {
+const isShippingPresent = (totalizers: Totalizer[]) => {
+  let result = false
+
+  for (let totalizer of totalizers) {
+    if (totalizer.id === 'Shipping') {
+      result = true
+    }
+  }
+
+  return result
+}
+
+const Summary: StorefrontFunctionComponent<SummaryProps> = ({
+  totalizers,
+  total,
+}) => {
+  if (!isShippingPresent(totalizers)) {
+    totalizers.push(shippingData)
+  }
+
   return (
-    <div className={`${styles.container} flex-column pv6 ph4`}>
-      <h3 className="mid-gray ph4">Summary</h3>
-      <br></br>
-      <div className="flex ph4 pv4"> 
-        <div className="fl w-60 pa2 b">Subtotal</div>
-        <div className="w-40 pa2 tr">$100000202</div>
-      </div>
+    <div className="ph5 ph0-m">
+      <h5 className="t-heading-5 mt6 mb6 mt8-l pt8-l">Summary</h5>
+      <ExtensionPoint id="coupon" />
 
-      <div className="b--black-20 bt ph4">
-        <p className="b">Delivery</p>
-      </div>
+      {totalizers.map(totalizer => (
+        <SummaryItem
+          key={totalizer.id}
+          label={totalizer.id}
+          name={totalizer.id === 'CustomTax' ? totalizer.name : ''}
+          value={(totalizer && totalizer.value) || minTotalizerValue}
+          large={false}
+        />
+      ))}
 
-      <div className="b--black-20 bt ph4">
-        <ExtensionPoint id="coupon"/>
-      </div>
+      <SummaryItem
+        label="Total"
+        value={total ? total : minTotalizerValue}
+        large
+      />
 
-      <div className="b--black-20 bt flex ph4 pv4">
-        <div className="fl w-60 pa2 b">Tax</div>
-        <div className="w-40 pa2 tr">$100000202</div>
-      </div>
-
-      <div className="bg-near-white b--black-20 bt ph4 pv4">
-        <div className="flex">
-          <div className="fl w-60 pa2 b">Total</div>
-          <div className="w-40 pa2 tr">$100000202</div>
-        </div>
-
-        <div className="pv4">
-          <Button variation="primary" size="large" block>CHECKOUT</Button>
-        </div>
-      </div>
+      <Button variation="primary" size="large" block>
+        Checkout
+      </Button>
     </div>
   )
 }
 
 interface SummaryProps {
   title?: string
+  intl: object
+  totalizers: any[]
+  total: number
 }
 
-Summary.schema = {
-  title: 'editor.base-store-component.title',
-  description: 'editor.base-store-component.description',
-  type: 'object',
-  properties: {
-    title: {
-      title: 'editor.base-store-component.title.title',
-      description: 'editor.base-store-component.title.description',
-      type: 'string',
-      default: null,
-    },
-  },
+Summary.defaultProps = {
+  totalizers: [],
+  total: minTotalizerValue,
 }
 
 export default Summary
