@@ -32,8 +32,8 @@ const Summary: StorefrontFunctionComponent<SummaryProps> = ({
   }
 
   return (
-    <div className="ph5 ph0-m">
-      <h5 className="t-heading-5 mt6 mb6 mt8-l pt8-l">Summary</h5>
+    <div className="c-on-base">
+      <h5 className="t-heading-5 mt6 mb6">Summary</h5>
       <ExtensionPoint id="coupon" />
 
       {totalizers.map(totalizer => (
