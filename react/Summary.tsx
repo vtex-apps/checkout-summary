@@ -32,7 +32,7 @@ const Summary: StorefrontFunctionComponent<SummaryProps> = ({
   }
 
   return (
-    <div>
+    <div className="c-on-base">
       <h5 className="t-heading-5 mt6 mb6">Summary</h5>
       <ExtensionPoint id="coupon" />
 
