@@ -33,7 +33,7 @@ const Summary: StorefrontFunctionComponent<SummaryProps> = ({
 
   return (
     <div className="c-on-base">
-      <h5 className="t-heading-5 mt6 mb6">Summary</h5>
+      <h5 className="t-heading-5 mt6 mb5">Summary</h5>
       <ExtensionPoint id="coupon" />
 
       {totalizers.map(totalizer => (
@@ -52,7 +52,7 @@ const Summary: StorefrontFunctionComponent<SummaryProps> = ({
         large
       />
 
-      <Button variation="primary" size="large" block>
+      <Button href="/checkout/#payment" variation="primary" size="large" block>
         Checkout
       </Button>
     </div>
