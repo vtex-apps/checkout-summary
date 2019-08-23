@@ -52,7 +52,7 @@ const Summary: StorefrontFunctionComponent<SummaryProps> = ({
         large
       />
 
-      <Button variation="primary" size="large" block>
+      <Button href="/checkout/#payment" variation="primary" size="large" block>
         Checkout
       </Button>
     </div>
