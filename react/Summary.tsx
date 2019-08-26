@@ -3,6 +3,8 @@ import { ExtensionPoint } from 'vtex.render-runtime'
 import { Button } from 'vtex.styleguide'
 import SummaryItem from './components/SummaryItem'
 
+import { OrderCouponProvider } from 'vtex.order-coupon/OrderCoupon'
+
 const minTotalizerValue = 0
 const shippingData = {
   id: 'Shipping',
@@ -34,7 +36,9 @@ const Summary: StorefrontFunctionComponent<SummaryProps> = ({
   return (
     <div className="c-on-base">
       <h5 className="t-heading-5 mt6 mb5">Summary</h5>
-      <ExtensionPoint id="coupon" />
+      <OrderCouponProvider>
+        <ExtensionPoint id="coupon" />
+      </OrderCouponProvider>
 
       {totalizers.map(totalizer => (
         <SummaryItem

@@ -1,5 +1,6 @@
 {
   "store/checkout-summary.Shipping": "Delivery",
   "store/checkout-summary.Items": "Subtotal",
-  "store/checkout-summary.Total": "Total"
+  "store/checkout-summary.Total": "Total",
+  "store/checkout-summary.Discounts": "Discounts"
 }

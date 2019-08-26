@@ -15,6 +15,10 @@ defineMessages({
     id: 'store/checkout-summary.Total',
     defaultMessage: 'Total',
   },
+  Discounts: {
+    id: 'store/checkout-summary.Discounts',
+    defaultMessage: 'Discounts',
+  },
 })
 
 interface Props {
