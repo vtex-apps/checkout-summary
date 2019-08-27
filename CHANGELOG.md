@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## Added
+
+- Price component in order to show message "free" instead of zero
+
 ## [0.3.0] - 2019-08-26
 
 ## Added
