@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react'
-import { FormattedCurrency } from 'vtex.format-currency'
 import { defineMessages, injectIntl, InjectedIntlProps } from 'react-intl'
+import { Price } from 'vtex.price'
 
 defineMessages({
   Shipping: {
@@ -45,8 +45,12 @@ const SummaryItem: FunctionComponent<Props & InjectedIntlProps> = ({
         (label &&
           intl.formatMessage({ id: `store/checkout-summary.${label}` }))}
     </div>
-    <div className={`flex-auto tr ${large ? 'fw6 fw5-l' : ''}`}>
-      <FormattedCurrency value={value / 100} />
+    <div
+      className={`flex-auto tr ${large ? 'fw6 fw5-l' : ''} ${
+        value ? '' : 'green'
+      }`}
+    >
+      <Price value={value / 100}></Price>
     </div>
   </div>
 )
