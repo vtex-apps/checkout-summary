@@ -47,7 +47,7 @@ const SummaryItem: FunctionComponent<Props & InjectedIntlProps> = ({
     </div>
     <div
       className={`flex-auto tr ${large ? 'fw6 fw5-l' : ''} ${
-        value ? '' : 'green'
+        value ? '' : 'c-success'
       }`}
     >
       <FormattedPrice value={value / 100}></FormattedPrice>
