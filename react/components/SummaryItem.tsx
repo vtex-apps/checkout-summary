@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react'
 import { defineMessages, injectIntl, InjectedIntlProps } from 'react-intl'
-import { Price } from 'vtex.price'
+import { FormattedPrice } from 'vtex.formatted-price'
 
 defineMessages({
   Shipping: {
@@ -50,7 +50,7 @@ const SummaryItem: FunctionComponent<Props & InjectedIntlProps> = ({
         value ? '' : 'green'
       }`}
     >
-      <Price value={value / 100}></Price>
+      <FormattedPrice value={value / 100}></FormattedPrice>
     </div>
   </div>
 )
