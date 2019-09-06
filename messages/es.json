@@ -1,6 +1,8 @@
 {
-  "store/checkout-summary.Shipping": "Entrega",
+  "store/checkout-summary.Checkout": "Ir a Pagar",
+  "store/checkout-summary.Discounts": "Descuentos",
   "store/checkout-summary.Items": "Subtotal",
-  "store/checkout-summary.Total": "Total",
-  "store/checkout-summary.Discounts": "Descuentos"
+  "store/checkout-summary.Shipping": "Entrega",
+  "store/checkout-summary.Summary": "Resumen",
+  "store/checkout-summary.Total": "Total"
 }
