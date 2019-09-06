@@ -1,9 +1,21 @@
 import React from 'react'
 import { ExtensionPoint } from 'vtex.render-runtime'
+import { FormattedMessage, defineMessages } from 'react-intl'
 import { Button } from 'vtex.styleguide'
 import SummaryItem from './components/SummaryItem'
 
 import { OrderCouponProvider } from 'vtex.order-coupon/OrderCoupon'
+
+defineMessages({
+  summary: {
+    defaultMessage: 'Summary',
+    id: 'store/checkout-summary.Summary',
+  },
+  checkout: {
+    defaultMessage: 'Checkout',
+    id: 'store/checkout-summary.Checkout',
+  },
+})
 
 const minTotalizerValue = 0
 const shippingData = {
@@ -35,7 +47,7 @@ const Summary: StorefrontFunctionComponent<SummaryProps> = ({
 
   return (
     <div className="c-on-base">
-      <h5 className="t-heading-5 mt6 mb5">Summary</h5>
+      <h5 className="t-heading-5 mt6 mb5"><FormattedMessage id="store/checkout-summary.Summary" /></h5>
       <OrderCouponProvider>
         <ExtensionPoint id="coupon" />
       </OrderCouponProvider>
@@ -57,7 +69,7 @@ const Summary: StorefrontFunctionComponent<SummaryProps> = ({
       />
 
       <Button href="/checkout/#payment" variation="primary" size="large" block>
-        Checkout
+        <FormattedMessage id="store/checkout-summary.Checkout" />
       </Button>
     </div>
   )
