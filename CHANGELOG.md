@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## Added
+
+- Tax totalizer translations
+
+## Changed
+
+- FormattedMessage instead of intl
+
 ## [0.4.1] - 2019-09-06
 
 ## Added
