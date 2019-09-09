@@ -24,7 +24,7 @@ defineMessages({
     id: 'store/checkout-summary.Discounts',
     defaultMessage: 'Discounts',
   },
-  Taxa: {
+  Tax: {
     id: 'store/checkout-summary.Tax',
     defaultMessage: 'Taxes',
   },
