@@ -1,6 +1,7 @@
 {
   "store/checkout-summary.Checkout": "Finalizar Compra",
   "store/checkout-summary.Discounts": "Descontos",
+  "store/checkout-summary.Tax": "Impostos",
   "store/checkout-summary.Items": "Subtotal",
   "store/checkout-summary.Summary": "Resumo",
   "store/checkout-summary.Shipping": "Entrega",

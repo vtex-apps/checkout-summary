@@ -47,7 +47,9 @@ const Summary: StorefrontFunctionComponent<SummaryProps> = ({
 
   return (
     <div className="c-on-base">
-      <h5 className="t-heading-5 mt6 mb5"><FormattedMessage id="store/checkout-summary.Summary" /></h5>
+      <h5 className="t-heading-5 mt6 mb5">
+        <FormattedMessage id="store/checkout-summary.Summary" />
+      </h5>
       <OrderCouponProvider>
         <ExtensionPoint id="coupon" />
       </OrderCouponProvider>
