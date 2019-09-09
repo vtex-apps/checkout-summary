@@ -1,5 +1,10 @@
 import React, { FunctionComponent } from 'react'
-import { defineMessages, injectIntl, InjectedIntlProps } from 'react-intl'
+import {
+  defineMessages,
+  injectIntl,
+  InjectedIntlProps,
+  FormattedMessage,
+} from 'react-intl'
 import { FormattedPrice } from 'vtex.formatted-price'
 
 defineMessages({
@@ -19,6 +24,10 @@ defineMessages({
     id: 'store/checkout-summary.Discounts',
     defaultMessage: 'Discounts',
   },
+  Tax: {
+    id: 'store/checkout-summary.Tax',
+    defaultMessage: 'Taxes',
+  },
 })
 
 interface Props {
@@ -30,7 +39,6 @@ interface Props {
 
 const SummaryItem: FunctionComponent<Props & InjectedIntlProps> = ({
   label,
-  intl,
   name,
   large,
   value,
@@ -42,8 +50,7 @@ const SummaryItem: FunctionComponent<Props & InjectedIntlProps> = ({
   >
     <div className="flex-none fw6 fw5-l">
       {name ||
-        (label &&
-          intl.formatMessage({ id: `store/checkout-summary.${label}` }))}
+        (label && <FormattedMessage id={`store/checkout-summary.${label}`} />)}
     </div>
     <div
       className={`flex-auto tr ${large ? 'fw6 fw5-l' : ''} ${
