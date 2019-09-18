@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## Changed
+
+- Summary components to be store blocks
+
 ## [0.5.0] - 2019-09-09
 
 ## Added

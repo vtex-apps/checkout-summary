@@ -1,0 +1,3 @@
+import SummaryGoToCheckoutButton from './components/SummaryGoToCheckoutButton/SummaryGoToCheckoutButton'
+
+export default SummaryGoToCheckoutButton
