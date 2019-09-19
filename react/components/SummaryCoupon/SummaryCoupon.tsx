@@ -11,9 +11,6 @@ const SummaryCoupon: FunctionComponent<SummaryCouponProps> = () => {
   )
 }
 
-interface SummaryCouponProps {
-  title?: string
-  intl: object
-}
+interface SummaryCouponProps {}
 
 export default SummaryCoupon

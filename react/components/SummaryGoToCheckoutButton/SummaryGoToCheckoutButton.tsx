@@ -17,9 +17,6 @@ const SummaryGoToCheckoutButton: FunctionComponent<ButtonProps> = () => {
   )
 }
 
-interface ButtonProps {
-  title?: string
-  intl: object
-}
+interface ButtonProps {}
 
 export default SummaryGoToCheckoutButton

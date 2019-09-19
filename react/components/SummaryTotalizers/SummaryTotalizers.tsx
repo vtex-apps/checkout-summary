@@ -53,4 +53,9 @@ const SummaryTotalizers: FunctionComponent<SummaryTotalizersProps> = () => {
 
 interface SummaryTotalizersProps {}
 
+SummaryTotalizers.defaultProps = {
+  totalizers: [],
+  total: minTotalizerValue,
+}
+
 export default SummaryTotalizers

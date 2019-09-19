@@ -18,8 +18,6 @@ interface Context {
   total: number
 }
 
-const minTotalizerValue = 0
-
 const SummaryContext = createContext<Context | undefined>(undefined)
 
 export const useSummary = () => {
@@ -52,11 +50,6 @@ interface SummaryProps {
   intl: object
   totalizers: any[]
   total: number
-}
-
-Summary.defaultProps = {
-  totalizers: [],
-  total: minTotalizerValue,
 }
 
 export default Summary
