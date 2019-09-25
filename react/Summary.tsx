@@ -36,10 +36,12 @@ const Summary: FunctionComponent<SummaryProps> = ({
 }) => {
   return (
     <SummaryContext.Provider value={{ totalizers: totalizers, total: total }}>
-      <h5 className="t-heading-5 mt6 mb5">
-        <FormattedMessage id="store/checkout-summary.Summary" />
-      </h5>
-      <div className="c-on-base">{children}</div>
+      <div>
+        <h5 className="t-heading-5 mt0 mb5">
+          <FormattedMessage id="store/checkout-summary.Summary" />
+        </h5>
+        <div className="c-on-base">{children}</div>
+      </div>
     </SummaryContext.Provider>
   )
 }
