@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## Changed
+
+- Styles to fit in flex layout
+
 ## [0.6.0] - 2019-09-20
 
 ## Changed
