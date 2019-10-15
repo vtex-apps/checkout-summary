@@ -7,45 +7,49 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+
+- `Styleguide` components ids.
+
 ## [0.7.0] - 2019-10-14
 
 ## [0.6.1] - 2019-10-01
 
-## Changed
+### Changed
 
 - Styles to fit in flex layout
 
 ## [0.6.0] - 2019-09-20
 
-## Changed
+### Changed
 
 - Summary components to be store blocks
 
 ## [0.5.0] - 2019-09-09
 
-## Added
+### Added
 
 - Tax totalizer translations
 
-## Changed
+### Changed
 
 - FormattedMessage instead of intl
 
 ## [0.4.1] - 2019-09-06
 
-## Added
+### Added
 
 - Summary and Checkout entries in intl list
 
 ## [0.4.0] - 2019-08-29
 
-## Added
+### Added
 
 - Price component in order to show message "free" instead of zero
 
 ## [0.3.0] - 2019-08-26
 
-## Added
+### Added
 
 - Discounts internationalization
 
@@ -57,14 +61,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [0.2.0] - 2019-08-19
 
-## Changed
+### Changed
 
 - Totalizers prop as an array of Totalizer objects
 - Default values to props
 
 ## [0.1.0] - 2019-08-15
 
-## Added
+### Added
 
 - React component for summary
 - Extension point in order to render Coupon app
