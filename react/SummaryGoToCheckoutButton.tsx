@@ -5,7 +5,7 @@ import { Button } from 'vtex.styleguide'
 const SummaryGoToCheckoutButton: FunctionComponent<ButtonProps> = () => {
   return (
     <Button
-      id="go-to-checkout"
+      id="proceed-to-checkout"
       href="/checkout/#payment"
       variation="primary"
       size="large"
