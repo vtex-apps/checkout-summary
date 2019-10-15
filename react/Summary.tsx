@@ -4,14 +4,7 @@ import React, {
   ReactNode,
   useContext,
 } from 'react'
-import { FormattedMessage, defineMessages } from 'react-intl'
-
-defineMessages({
-  summary: {
-    defaultMessage: 'Summary',
-    id: 'store/checkout-summary.Summary',
-  },
-})
+import { FormattedMessage } from 'react-intl'
 
 interface Context {
   totalizers: any[]
