@@ -2,8 +2,7 @@
   "checkout-summary": {
     "children": [
       "summary-coupon",
-      "summary-totalizers",
-      "summary-go-to-checkout-button"
+      "summary-totalizers"
     ]
   },
 

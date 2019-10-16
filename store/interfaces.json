@@ -2,7 +2,6 @@
   "checkout-summary": {
     "component": "Summary",
     "allowed": [
-      "summary-go-to-checkout-button",
       "summary-coupon",
       "summary-title",
       "summary-totalizers"
@@ -17,10 +16,6 @@
   "summary-coupon": {
     "component": "SummaryCoupon",
     "allowed": ["coupon"]
-  },
-
-  "summary-go-to-checkout-button": {
-    "component": "SummaryGoToCheckoutButton"
   },
 
   "summary-totalizers": {
