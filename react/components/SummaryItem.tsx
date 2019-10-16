@@ -1,10 +1,5 @@
 import React, { FunctionComponent } from 'react'
-import {
-  defineMessages,
-  injectIntl,
-  InjectedIntlProps,
-  FormattedMessage,
-} from 'react-intl'
+import { defineMessages, FormattedMessage } from 'react-intl'
 import { FormattedPrice } from 'vtex.formatted-price'
 
 defineMessages({
@@ -37,7 +32,7 @@ interface Props {
   value: number
 }
 
-const SummaryItem: FunctionComponent<Props & InjectedIntlProps> = ({
+const SummaryItem: FunctionComponent<Props> = ({
   label,
   name,
   large,
@@ -48,18 +43,17 @@ const SummaryItem: FunctionComponent<Props & InjectedIntlProps> = ({
       large ? 'f4 mt4 pb6' : 'mt3'
     }`}
   >
-    <div className="flex-none fw6 fw5-l">
+    <div id={label} className="flex-none fw6 fw5-l">
       {name ||
         (label && <FormattedMessage id={`store/checkout-summary.${label}`} />)}
     </div>
-    <div
-      className={`flex-auto tr ${large ? 'fw6 fw5-l' : ''} ${
-        value === 0 ? 'c-success' : ''
-      }`}
-    >
-      <FormattedPrice value={value ? value / 100 : value}></FormattedPrice>
+    <div className={`flex-auto tr ${large ? 'fw6 fw5-l' : ''}`}>
+      <FormattedPrice
+        id={`${label}-price`}
+        value={value ? value / 100 : value}
+      ></FormattedPrice>
     </div>
   </div>
 )
 
-export default injectIntl(SummaryItem)
+export default SummaryItem
