@@ -1,5 +1,4 @@
 {
-  "store/checkout-summary.Checkout": "Checkout",
   "store/checkout-summary.Discounts": "Discounts",
   "store/checkout-summary.Tax": "Taxes",
   "store/checkout-summary.Items": "Subtotal",
