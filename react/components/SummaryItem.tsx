@@ -2,6 +2,8 @@ import React, { FunctionComponent } from 'react'
 import { defineMessages, FormattedMessage } from 'react-intl'
 import { FormattedPrice } from 'vtex.formatted-price'
 
+import { slugify } from '../utils/slugify'
+
 defineMessages({
   Shipping: {
     id: 'store/checkout-summary.Shipping',
@@ -38,7 +40,7 @@ const SummaryItem: FunctionComponent<Props> = ({
   large,
   value,
 }) => {
-  const itemId = label.toLowerCase()
+  const itemId = slugify(label)
 
   return (
     <div
@@ -56,7 +58,7 @@ const SummaryItem: FunctionComponent<Props> = ({
         id={`${itemId}-price`}
         className={`flex-auto tr ${large ? 'fw6 fw5-l' : ''}`}
       >
-        <FormattedPrice value={value ? value / 100 : value}></FormattedPrice>
+        <FormattedPrice value={value ? value / 100 : value} />
       </div>
     </div>
   )
