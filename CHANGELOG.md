@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Changed
+
+- Element's `id` to lowercase letters.
+
 ## [0.8.0] - 2019-10-18
 
 ### Removed

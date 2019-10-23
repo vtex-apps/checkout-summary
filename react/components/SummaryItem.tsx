@@ -37,23 +37,29 @@ const SummaryItem: FunctionComponent<Props> = ({
   name,
   large,
   value,
-}) => (
-  <div
-    className={`flex w-100 c-on-base lh-copy items-center ${
-      large ? 'f4 mt4 pb5' : 'mt3'
-    }`}
-  >
-    <div id={label} className="flex-none fw6 fw5-l">
-      {name ||
-        (label && <FormattedMessage id={`store/checkout-summary.${label}`} />)}
+}) => {
+  const itemId = label.toLowerCase()
+
+  return (
+    <div
+      className={`flex w-100 c-on-base lh-copy items-center ${
+        large ? 'f4 mt4 pb5' : 'mt3'
+      }`}
+    >
+      <div id={itemId} className="flex-none fw6 fw5-l">
+        {name ||
+          (label && (
+            <FormattedMessage id={`store/checkout-summary.${label}`} />
+          ))}
+      </div>
+      <div
+        id={`${itemId}-price`}
+        className={`flex-auto tr ${large ? 'fw6 fw5-l' : ''}`}
+      >
+        <FormattedPrice value={value ? value / 100 : value}></FormattedPrice>
+      </div>
     </div>
-    <div className={`flex-auto tr ${large ? 'fw6 fw5-l' : ''}`}>
-      <FormattedPrice
-        id={`${label}-price`}
-        value={value ? value / 100 : value}
-      ></FormattedPrice>
-    </div>
-  </div>
-)
+  )
+}
 
 export default SummaryItem
