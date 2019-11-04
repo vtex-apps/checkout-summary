@@ -1,6 +1,7 @@
 import React, { createContext, useContext, FunctionComponent } from 'react'
 
 interface ContextProps {
+  loading: boolean
   totalizers: Totalizer[]
   total: number
 }
@@ -17,11 +18,12 @@ export const useSummary = () => {
 }
 
 const SummaryContextProvider: FunctionComponent<ContextProps> = ({
+  loading,
   totalizers,
   total,
   children,
 }) => (
-  <SummaryContext.Provider value={{ totalizers, total }}>
+  <SummaryContext.Provider value={{ loading, totalizers, total }}>
     {children}
   </SummaryContext.Provider>
 )

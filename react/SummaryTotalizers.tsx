@@ -1,4 +1,5 @@
 import React, { FunctionComponent } from 'react'
+import { Loading } from 'vtex.render-runtime'
 import SummaryItem from './components/SummaryItem'
 
 import { useSummary } from './SummaryContext'
@@ -20,7 +21,11 @@ const SummaryTotalizers: FunctionComponent<SummaryTotalizersProps> = ({
   showTotal = true,
   showDeliveryTotal = true,
 }) => {
-  const { totalizers, total } = useSummary()
+  const {loading, totalizers, total } = useSummary()
+
+  if(loading){
+    return <Loading/>
+  }
 
   if (!isShippingPresent(totalizers) && showDeliveryTotal) {
     totalizers.push(shippingData)

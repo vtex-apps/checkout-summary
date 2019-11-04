@@ -5,11 +5,16 @@ import SummaryContextProvider from './SummaryContext'
 
 const Summary: FunctionComponent<SummaryProps> = ({
   children,
+  loading,
   totalizers,
   total,
 }) => {
   return (
-    <SummaryContextProvider totalizers={totalizers} total={total}>
+    <SummaryContextProvider
+      loading={loading}
+      totalizers={totalizers}
+      total={total}
+    >
       <div>
         <h5 className="t-heading-5 mt0 mb5">
           <FormattedMessage id="store/checkout-summary.Summary" />

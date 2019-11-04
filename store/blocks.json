@@ -1,9 +1,13 @@
 {
   "checkout-summary": {
-    "children": [
-      "summary-coupon",
-      "summary-totalizers"
-    ]
+    "children": ["flex-layout.row#summary-coupon", "summary-totalizers"]
+  },
+
+  "flex-layout.row#summary-coupon": {
+    "children": ["summary-coupon"],
+    "props": {
+      "marginBottom": 6
+    }
   },
 
   "summary-coupon": {

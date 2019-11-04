@@ -17,10 +17,22 @@
 
   "summary-coupon": {
     "component": "SummaryCoupon",
-    "allowed": ["coupon"]
+    "allowed": ["coupon"],
+    "preview": {
+      "type": "box",
+      "height": 32,
+      "width": 240
+    }
   },
 
   "summary-totalizers": {
-    "component": "SummaryTotalizers"
+    "component": "SummaryTotalizers",
+    "preview": {
+      "type": "text",
+      "height": 108,
+      "horizontalMargin": 0,
+      "lineHeight": 24,
+      "shortLastLine": false
+    }
   }
 }
