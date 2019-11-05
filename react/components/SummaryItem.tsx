@@ -48,7 +48,7 @@ const SummaryItem: FunctionComponent<Props> = ({
         large ? 'f4 mt4 pb5' : 'mt3'
       }`}
     >
-      <div id={itemId} className="flex-none fw6 fw5-l">
+      <div id={itemId} className="flex-none fw5">
         {name ||
           (label && (
             <FormattedMessage id={`store/checkout-summary.${label}`} />
@@ -56,7 +56,7 @@ const SummaryItem: FunctionComponent<Props> = ({
       </div>
       <div
         id={`${itemId}-price`}
-        className={`flex-auto tr ${large ? 'fw6 fw5-l' : ''}`}
+        className={`flex-auto tr ${large ? 'fw5' : ''}`}
       >
         <FormattedPrice value={value ? value / 100 : value} />
       </div>
