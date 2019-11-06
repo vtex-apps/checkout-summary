@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+
+- New `SummarySmall` component and `checkout-summary.compact` interface.
+- New `showTotal` and `showDeliveryTotal` props to `SummaryTotalizers`.
+
 ## [0.8.1] - 2019-10-23
 
 ### Changed
