@@ -1,10 +1,10 @@
 import React, { FunctionComponent } from 'react'
 import SummaryItem from './components/SummaryItem'
 
-import { useSummary } from './Summary'
+import { useSummary } from './SummaryContext'
 
 const minTotalizerValue = 0
-const tba = undefined
+const tba = null
 const shippingData = {
   id: 'Shipping',
   name: '',
@@ -16,10 +16,13 @@ const isShippingPresent = (totalizers: Totalizer[]) => {
   return totalizers.some(t => t.id === 'Shipping')
 }
 
-const SummaryTotalizers: FunctionComponent<SummaryTotalizersProps> = () => {
+const SummaryTotalizers: FunctionComponent<SummaryTotalizersProps> = ({
+  showTotal = true,
+  showDeliveryTotal = true,
+}) => {
   const { totalizers, total } = useSummary()
 
-  if (!isShippingPresent(totalizers)) {
+  if (!isShippingPresent(totalizers) && showDeliveryTotal) {
     totalizers.push(shippingData)
   }
 
@@ -35,20 +38,20 @@ const SummaryTotalizers: FunctionComponent<SummaryTotalizersProps> = () => {
         />
       ))}
 
-      <SummaryItem
-        label="Total"
-        value={total ? total : minTotalizerValue}
-        large
-      />
+      {showTotal && (
+        <SummaryItem
+          label="Total"
+          value={total ? total : minTotalizerValue}
+          large
+        />
+      )}
     </div>
   )
 }
 
-interface SummaryTotalizersProps {}
-
-SummaryTotalizers.defaultProps = {
-  totalizers: [],
-  total: minTotalizerValue,
+interface SummaryTotalizersProps {
+  showTotal: boolean
+  showDeliveryTotal: boolean
 }
 
 export default SummaryTotalizers
