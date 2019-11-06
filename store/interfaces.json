@@ -11,10 +11,6 @@
     "composition": "children"
   },
 
-  "summary-title": {
-    "component": "SummaryTitle"
-  },
-
   "summary-coupon": {
     "component": "SummaryCoupon",
     "allowed": ["coupon"],
