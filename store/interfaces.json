@@ -1,11 +1,13 @@
 {
   "checkout-summary": {
     "component": "Summary",
-    "allowed": [
-      "summary-coupon",
-      "summary-title",
-      "summary-totalizers"
-    ],
+    "allowed": ["summary-coupon", "summary-title", "summary-totalizers"],
+    "composition": "children"
+  },
+
+  "checkout-summary.compact": {
+    "component": "SummarySmall",
+    "allowed": ["summary-totalizers"],
     "composition": "children"
   },
 
