@@ -4,5 +4,6 @@
   "store/checkout-summary.Items": "Subtotal",
   "store/checkout-summary.Shipping": "Delivery",
   "store/checkout-summary.Summary": "Summary",
-  "store/checkout-summary.Total": "Total"
+  "store/checkout-summary.Total": "Total",
+  "store/checkout-summary.disclaimer": "Shipping and taxes calculated at checkout."
 }

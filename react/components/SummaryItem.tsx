@@ -31,7 +31,7 @@ interface Props {
   label: string
   name?: string
   large: boolean
-  value: number
+  value: number | null
 }
 
 const SummaryItem: FunctionComponent<Props> = ({
