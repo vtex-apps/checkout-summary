@@ -1,5 +1,5 @@
 interface Totalizer {
   id: string
-  value: number
+  value: number | null
   name: string
 }
