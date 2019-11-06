@@ -6,7 +6,7 @@
   "flex-layout.row#summary-coupon": {
     "children": ["summary-coupon"],
     "props": {
-      "marginBottom": 6
+      "marginBottom": 4
     }
   },
 

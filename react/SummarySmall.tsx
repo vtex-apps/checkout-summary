@@ -20,7 +20,11 @@ const SummarySmall: FunctionComponent<Props> = ({
   )
 
   return (
-    <SummaryContextProvider totalizers={filteredTotalizers} total={total}>
+    <SummaryContextProvider
+      loading={false}
+      totalizers={filteredTotalizers}
+      total={total}
+    >
       <div className="c-on-base">{children}</div>
       <span className="t-small db mv4">
         <FormattedMessage id="store/checkout-summary.disclaimer" />

@@ -1,7 +1,7 @@
 {
   "checkout-summary": {
     "component": "Summary",
-    "allowed": ["summary-coupon", "summary-title", "summary-totalizers"],
+    "allowed": "*",
     "composition": "children"
   },
 

@@ -26,6 +26,7 @@ const Summary: FunctionComponent<SummaryProps> = ({
 }
 
 interface SummaryProps {
+  loading: boolean
   totalizers: Totalizer[]
   total: number
 }
