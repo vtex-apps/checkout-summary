@@ -31,11 +31,11 @@ const Summary: FunctionComponent<SummaryProps> = ({
   )
 }
 
-interface SummaryProps {
-  coupon: string
-  insertCoupon: (coupon: string) => Promise<boolean>
-  couponErrorKey: string
-  loading: boolean
+export interface SummaryProps {
+  coupon?: string
+  insertCoupon?: (coupon: string) => Promise<boolean>
+  couponErrorKey?: string
+  loading?: boolean
   totalizers: Totalizer[]
   total: number
 }

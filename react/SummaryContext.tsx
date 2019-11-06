@@ -1,15 +1,8 @@
 import React, { createContext, useContext, FunctionComponent } from 'react'
 
-interface ContextProps {
-  coupon?: string
-  insertCoupon?: (coupon: string) => Promise<boolean>
-  couponErrorKey?: string
-  loading?: boolean
-  totalizers: Totalizer[]
-  total: number
-}
+import { SummaryProps } from './Summary'
 
-const SummaryContext = createContext<ContextProps | undefined>(undefined)
+const SummaryContext = createContext<SummaryProps | undefined>(undefined)
 
 export const useSummary = () => {
   const context = useContext(SummaryContext)
@@ -20,7 +13,7 @@ export const useSummary = () => {
   return context
 }
 
-const SummaryContextProvider: FunctionComponent<ContextProps> = ({
+const SummaryContextProvider: FunctionComponent<SummaryProps> = ({
   coupon,
   insertCoupon,
   couponErrorKey,
