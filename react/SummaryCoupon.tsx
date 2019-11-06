@@ -5,7 +5,7 @@ import { OrderCouponProvider } from 'vtex.order-coupon/OrderCoupon'
 import { useSummary } from './SummaryContext'
 
 const SummaryCoupon: FunctionComponent<SummaryCouponProps> = () => {
-  const { loading } = useSummary()
+  const { coupon, insertCoupon, couponErrorKey, loading } = useSummary()
 
   if (loading) {
     return <Loading />
@@ -13,7 +13,12 @@ const SummaryCoupon: FunctionComponent<SummaryCouponProps> = () => {
 
   return (
     <OrderCouponProvider>
-      <ExtensionPoint id="coupon" />
+      <ExtensionPoint
+        id="coupon"
+        coupon={coupon}
+        insertCoupon={insertCoupon}
+        couponErrorKey={couponErrorKey}
+      />
     </OrderCouponProvider>
   )
 }

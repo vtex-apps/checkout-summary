@@ -1,7 +1,10 @@
 import React, { createContext, useContext, FunctionComponent } from 'react'
 
 interface ContextProps {
-  loading: boolean
+  coupon?: string
+  insertCoupon?: (coupon: string) => Promise<boolean>
+  couponErrorKey?: string
+  loading?: boolean
   totalizers: Totalizer[]
   total: number
 }
@@ -18,12 +21,24 @@ export const useSummary = () => {
 }
 
 const SummaryContextProvider: FunctionComponent<ContextProps> = ({
+  coupon,
+  insertCoupon,
+  couponErrorKey,
   loading,
   totalizers,
   total,
   children,
 }) => (
-  <SummaryContext.Provider value={{ loading, totalizers, total }}>
+  <SummaryContext.Provider
+    value={{
+      coupon,
+      insertCoupon,
+      couponErrorKey,
+      loading,
+      totalizers,
+      total,
+    }}
+  >
     {children}
   </SummaryContext.Provider>
 )
