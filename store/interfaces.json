@@ -17,7 +17,10 @@
     "preview": {
       "type": "box",
       "height": 32,
-      "width": 240
+      "width": 240,
+      "options": {
+        "padding": 0
+      }
     }
   },
 
@@ -26,9 +29,11 @@
     "preview": {
       "type": "text",
       "height": 108,
-      "horizontalMargin": 0,
-      "lineHeight": 24,
-      "shortLastLine": false
+      "options": {
+        "padding": 0,
+        "fontSize": 24,
+        "paragraph": false
+      }
     }
   }
 }
