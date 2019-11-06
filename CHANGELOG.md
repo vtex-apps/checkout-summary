@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Changed
+
+- Font weight of totals.
+
+### Removed
+
+- Padding bottom of Total line.
+
 ## [0.11.0] - 2019-11-06
 
 ### Added
