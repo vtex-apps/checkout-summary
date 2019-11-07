@@ -45,7 +45,7 @@ const SummaryItem: FunctionComponent<Props> = ({
   return (
     <div
       className={`flex w-100 c-on-base lh-copy items-center ${
-        large ? 'f4 mt4' : 'mt3'
+        large ? 'f4 mt4' : 'mt2'
       }`}
     >
       <div id={itemId} className="flex-none fw5">
