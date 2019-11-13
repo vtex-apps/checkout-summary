@@ -9,14 +9,12 @@ const Summary: FunctionComponent<SummaryProps> = ({
   totalizers,
   total,
   coupon,
-  couponErrorKey,
   insertCoupon,
 }) => {
   return (
     <SummaryContextProvider
       coupon={coupon}
       insertCoupon={insertCoupon}
-      couponErrorKey={couponErrorKey}
       loading={loading}
       totalizers={totalizers}
       total={total}
@@ -31,10 +29,14 @@ const Summary: FunctionComponent<SummaryProps> = ({
   )
 }
 
+interface InsertCouponResult {
+  success: boolean
+  errorKey: string
+}
+
 export interface SummaryProps {
   coupon?: string
-  insertCoupon?: (coupon: string) => Promise<boolean>
-  couponErrorKey?: string
+  insertCoupon?: (coupon: string) => Promise<InsertCouponResult>
   loading?: boolean
   totalizers: Totalizer[]
   total: number
