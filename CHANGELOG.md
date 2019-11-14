@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Changed
+
+- `couponErrorKey` is not being provided as a prop anymore but, instead, it is now part of `insertCoupon` result.
+
 ## [0.11.0] - 2019-11-06
 
 ### Added

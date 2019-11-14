@@ -16,7 +16,6 @@ export const useSummary = () => {
 const SummaryContextProvider: FunctionComponent<SummaryProps> = ({
   coupon,
   insertCoupon,
-  couponErrorKey,
   loading,
   totalizers,
   total,
@@ -26,7 +25,6 @@ const SummaryContextProvider: FunctionComponent<SummaryProps> = ({
     value={{
       coupon,
       insertCoupon,
-      couponErrorKey,
       loading,
       totalizers,
       total,
