@@ -32,6 +32,7 @@
     "preview": {
       "type": "text",
       "height": 108,
+      "fullWidth": true,
       "options": {
         "padding": 0,
         "fontSize": 24,
