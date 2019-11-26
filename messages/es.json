@@ -5,5 +5,7 @@
   "store/checkout-summary.Shipping": "Entrega",
   "store/checkout-summary.Summary": "Resumen",
   "store/checkout-summary.Total": "Total",
-  "store/checkout-summary.disclaimer": "Gastos de envío e impuestos calculados al finalizar la compra."
+  "store/checkout-summary.disclaimer": "Gastos de envío e impuestos calculados al finalizar la compra.",
+  "admin/editor.checkout-summary.label": "Resumen",
+  "admin/editor.checkout-summary.title": "Título"
 }
