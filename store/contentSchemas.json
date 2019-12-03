@@ -1,0 +1,12 @@
+{
+  "definitions": {
+    "Summary": {
+      "properties": {
+        "title": {
+          "$ref": "app:vtex.native-types#/definitions/text",
+          "default": "store/checkout-summary.Summary"
+        }
+      }
+    }
+  }
+}
