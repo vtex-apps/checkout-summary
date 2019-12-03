@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.13.0] - 2019-12-03
+
 ### Added
 
 - `schema` to `Summary` component so it appears in Site Editor.
