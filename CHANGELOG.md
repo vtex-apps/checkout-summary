@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.13.1] - 2019-12-10
+
 ### Changed
 
 - Forces summary preview skeleton to use the entire component's width.
