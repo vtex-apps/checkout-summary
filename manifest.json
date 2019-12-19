@@ -1,7 +1,7 @@
 {
   "vendor": "vtex",
   "name": "checkout-summary",
-  "version": "0.13.2",
+  "version": "0.14.0",
   "title": "IO Summary Component",
   "description": "IO summary component to checkout",
   "defaultLocale": "pt-BR",
