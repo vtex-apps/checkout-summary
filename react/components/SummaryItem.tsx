@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from 'react'
 import { defineMessages, FormattedMessage } from 'react-intl'
 import { FormattedPrice } from 'vtex.formatted-price'
+import { useCssHandles } from 'vtex.css-handles'
 
 import { slugify } from '../utils/slugify'
 
@@ -34,21 +35,31 @@ interface Props {
   value: number | null
 }
 
+const CSS_HANDLES = [
+  'summaryItemContainer',
+  'summaryItemLabel',
+  'summaryItemPrice',
+] as const
+
 const SummaryItem: FunctionComponent<Props> = ({
   label,
   name,
   large,
   value,
 }) => {
+  const handles = useCssHandles(CSS_HANDLES)
   const itemId = slugify(label)
 
   return (
     <div
       className={`flex w-100 c-on-base lh-copy items-center ${
-        large ? 'f4 mt4 pb5' : 'mt3'
-      }`}
+        handles.summaryItemContainer
+      } ${large ? 'f4 mt4 pb5' : 'mt3'}`}
     >
-      <div id={itemId} className="flex-none fw6 fw5-l">
+      <div
+        id={itemId}
+        className={`${handles.summaryItemLabel} flex-none fw6 fw5-l`}
+      >
         {name ||
           (label && (
             <FormattedMessage id={`store/checkout-summary.${label}`} />
@@ -56,7 +67,9 @@ const SummaryItem: FunctionComponent<Props> = ({
       </div>
       <div
         id={`${itemId}-price`}
-        className={`flex-auto tr ${large ? 'fw6 fw5-l' : ''}`}
+        className={`flex-auto tr ${handles.summaryItemPrice} ${
+          large ? 'fw6 fw5-l' : ''
+        }`}
       >
         <FormattedPrice value={value ? value / 100 : value} />
       </div>

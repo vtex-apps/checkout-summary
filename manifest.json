@@ -21,7 +21,8 @@
     "vtex.format-currency": "0.x",
     "vtex.order-coupon": "0.x",
     "vtex.formatted-price": "0.x",
-    "vtex.flex-layout": "0.x"
+    "vtex.flex-layout": "0.x",
+    "vtex.css-handles": "0.x"
   },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import { defineMessages, FormattedMessage } from 'react-intl'
+import { useCssHandles } from 'vtex.css-handles'
 
 import SummaryContextProvider from './SummaryContext'
 
@@ -14,6 +15,8 @@ const messages = defineMessages({
   },
 })
 
+const CSS_HANDLES = ['summaryTitle', 'summaryContent'] as const
+
 const Summary: StorefrontFunctionComponent<StorefrontSummaryProps> = ({
   children,
   loading,
@@ -23,6 +26,8 @@ const Summary: StorefrontFunctionComponent<StorefrontSummaryProps> = ({
   insertCoupon,
   title,
 }) => {
+  const handles = useCssHandles(CSS_HANDLES)
+
   return (
     <SummaryContextProvider
       coupon={coupon}
@@ -31,12 +36,10 @@ const Summary: StorefrontFunctionComponent<StorefrontSummaryProps> = ({
       totalizers={totalizers}
       total={total}
     >
-      <div>
-        <h5 className="t-heading-5 mt0 mb5">
-          <FormattedMessage id={title} />
-        </h5>
-        <div className="c-on-base">{children}</div>
-      </div>
+      <h5 className={`${handles.summaryTitle} t-heading-5 mt0 mb5`}>
+        <FormattedMessage id={title} />
+      </h5>
+      <div className={`${handles.summaryContent} c-on-base`}>{children}</div>
     </SummaryContextProvider>
   )
 }
