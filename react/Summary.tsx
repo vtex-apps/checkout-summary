@@ -36,10 +36,13 @@ const Summary: StorefrontFunctionComponent<StorefrontSummaryProps> = ({
       totalizers={totalizers}
       total={total}
     >
-      <h5 className={`${handles.summaryTitle} t-heading-5 mt0 mb5`}>
-        <FormattedMessage id={title} />
-      </h5>
-      <div className={`${handles.summaryContent} c-on-base`}>{children}</div>
+      {/* Removing the div below may break the layout. See PR #25 */}
+      <div>
+        <h5 className={`${handles.summaryTitle} t-heading-5 mt0 mb5`}>
+          <FormattedMessage id={title} />
+        </h5>
+        <div className={`${handles.summaryContent} c-on-base`}>{children}</div>
+      </div>
     </SummaryContextProvider>
   )
 }
