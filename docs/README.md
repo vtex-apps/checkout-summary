@@ -28,7 +28,7 @@ Compact version:
 
 ### Advanced Customization
 
-The `checkout-summary` block is made up of other smalled blocks. Currently, its default implementation is as follows:
+The `checkout-summary` block is made up of other smaller blocks. Currently, its default implementation is as follows:
 
 ```json
 {
