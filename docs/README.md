@@ -26,6 +26,31 @@ Compact version:
   }
 ```
 
+### Advanced Customization
+
+The `checkout-summary` block is made up of other smalled blocks. Currently, its default implementation is as follows:
+
+```json
+{
+  "checkout-summary": {
+    "children": ["flex-layout.row#summary-coupon", "summary-totalizers"]
+  },
+  "flex-layout.row#summary-coupon": {
+    "children": ["summary-coupon"],
+    "props": {
+      "marginBottom": 6
+    }
+  },
+  "summary-coupon": {
+    "blocks": ["coupon"]
+  }
+}
+```
+
+By default implementation we mean that whenever you use `checkout-summary` in your store you're actually using the `json` above behind the scenes.
+
+Therefore, in order to customize the Checkout Summary configuration, you can simply use the default implementation in your code and change it as you wish.
+
 ## Customization
 
 In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization).
