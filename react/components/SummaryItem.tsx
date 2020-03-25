@@ -71,7 +71,12 @@ const SummaryItem: FunctionComponent<Props> = ({
           large ? 'fw6 fw5-l' : ''
         }`}
       >
-        <FormattedPrice value={value ? value / 100 : value} />
+        <FormattedPrice
+          // @ts-ignore: the component can handle null and
+          // undefined values, but the prop typings are too
+          // strict
+          value={value ? value / 100 : value}
+        />
       </div>
     </div>
   )
