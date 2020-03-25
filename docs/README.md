@@ -54,6 +54,34 @@ By default implementation we mean that whenever you use `checkout-summary` in yo
 
 Therefore, in order to customize the Checkout Summary configuration, you can simply use the default implementation in your code and change it as you wish.
 
+Additionally, you can also include a `"drawer"` block inside the `checkout-summary`, and the drawer trigger
+will appear alongside the "Summary" title.
+
+```jsonc
+{
+  "checkout-summary": {
+    "blocks": [
+      "drawer#my-drawer"
+    ],
+    "children": [
+      "flex-layout.row#summary-coupon",
+      "summary-totalizers"
+    ]
+  },
+  "drawer#my-drawer": {
+    "blocks": [
+      "drawer-trigger#my-trigger"
+    ]
+  },
+  "drawer-trigger#my-trigger": {
+    "children": [
+      // whatever you put inside here will
+      // appear alongside the summary title
+    ]
+  }
+}
+```
+
 ## Customization
 
 In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization).
