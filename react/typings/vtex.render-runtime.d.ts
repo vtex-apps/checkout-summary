@@ -1,3 +1,7 @@
+/* eslint-disable import/order */
+
+import * as Runtime from 'vtex.render-runtime'
+
 /* Typings for `render-runtime` */
 declare module 'vtex.render-runtime' {
   import { Component, ComponentType, ReactElement, ReactType } from 'react'

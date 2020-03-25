@@ -1,10 +1,10 @@
 import React, { FunctionComponent } from 'react'
 import { ExtensionPoint, Loading } from 'vtex.render-runtime'
+import { OrderCoupon } from 'vtex.order-coupon'
 
-import { OrderCouponProvider } from 'vtex.order-coupon/OrderCoupon'
 import { useSummary } from './SummaryContext'
 
-const SummaryCoupon: FunctionComponent<SummaryCouponProps> = () => {
+const SummaryCoupon: FunctionComponent = () => {
   const { coupon, insertCoupon, loading } = useSummary()
 
   if (loading) {
@@ -12,12 +12,10 @@ const SummaryCoupon: FunctionComponent<SummaryCouponProps> = () => {
   }
 
   return (
-    <OrderCouponProvider>
+    <OrderCoupon.OrderCouponProvider>
       <ExtensionPoint id="coupon" coupon={coupon} insertCoupon={insertCoupon} />
-    </OrderCouponProvider>
+    </OrderCoupon.OrderCouponProvider>
   )
 }
-
-interface SummaryCouponProps {}
 
 export default SummaryCoupon

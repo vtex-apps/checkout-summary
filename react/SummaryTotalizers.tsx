@@ -1,7 +1,7 @@
 import React, { FunctionComponent, Fragment } from 'react'
 import { Loading } from 'vtex.render-runtime'
-import SummaryItem from './components/SummaryItem'
 
+import SummaryItem from './components/SummaryItem'
 import { useSummary } from './SummaryContext'
 
 const minTotalizerValue = 0
@@ -44,11 +44,7 @@ const SummaryTotalizers: FunctionComponent<SummaryTotalizersProps> = ({
       ))}
 
       {showTotal && (
-        <SummaryItem
-          label="Total"
-          value={total ? total : minTotalizerValue}
-          large
-        />
+        <SummaryItem label="Total" value={total || minTotalizerValue} large />
       )}
     </Fragment>
   )
