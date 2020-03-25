@@ -1,7 +1,7 @@
 {
   "checkout-summary": {
     "component": "Summary",
-    "allowed": "*",
+    "allowed": ["drawer"],
     "composition": "children",
     "content": {
       "$ref": "#/definitions/Summary"
