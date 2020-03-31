@@ -16,17 +16,21 @@ Compact version:
 1. Add the Summary app to your theme's dependencies in `manifest.json`. For example:
 
 ```json
+{
   "dependencies": {
     "vtex.checkout-summary": "0.x"
   }
+}
 ```
 
 2. Add the `checkout-summary.compact` block to the `minicart-summary` block of the Minicart or the `checkout-summary` block to the `summary-wrapper` block of the Checkout Cart. For example:
 
 ```json
+{
   "minicart-summary#example": {
     "blocks": ["checkout-summary.compact"]
   }
+}
 ```
 
 ### Advanced Customization
@@ -163,4 +167,4 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- prettier-ignore-end -->
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
