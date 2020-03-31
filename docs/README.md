@@ -57,9 +57,11 @@ The `checkout-summary` block is made up of other smaller blocks. Currently, its 
 By default implementation we mean that whenever you use `checkout-summary` in your store you're actually using the `json` above behind the scenes.
 
 Therefore, in order to customize the Checkout Summary configuration, you can simply use the default implementation in your code and change it as you wish.
+For more information on which props you need to pass to the Summary component, [see below](#components).
 
-Additionally, you can also include a `"drawer"` block inside the `checkout-summary`, and the drawer trigger
-will appear alongside the "Summary" title.
+Additionally, you can also include a [Drawer](https://vtex.io/docs/components/content-blocks/vtex.store-drawer) inside the `checkout-summary`.
+
+Notice the following: the block declared as children of the `drawer-trigger` block will appear alongside the Summary title.
 
 ```jsonc
 {
