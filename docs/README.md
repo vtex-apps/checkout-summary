@@ -144,6 +144,43 @@ totalizers. E.g.:
 
 The total value of the order. Should be the sum of all totalizers values.
 
+### SummarySmall
+
+The componente rendered when used the `checkout-summary.compact` block.
+
+#### Props
+
+| Prop name | Type | Required |
+| --- | --- | --- |
+| [`totalizers`](#summarysmall-totalizers) | `array` | `true` |
+| [`totalizersToShow`](#summarysmall-totalizerstoshow) | `array` | `true` |
+| [`total`](#summarysmall-total) | `number` | `true` |
+
+##### SummarySmall totalizers
+
+`Array<{ id: string; value: number | null; name: string }>`
+
+Same as the [Summary totalizers](#summary-totalizers) prop.
+
+##### SummarySmall total
+
+Same as the [Summary total](#summary-total) prop.
+
+##### SummarySmall totalizersToShow
+
+`string[]`
+
+Id of the totalizers that should be displayed inside this component, e.g.:
+
+```js
+[
+  // Value of the subtotal
+  'Items',
+  // Delivery value
+  'Shipping'
+]
+```
+
 ## Customization
 
 In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization).
