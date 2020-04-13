@@ -59,6 +59,33 @@ By default implementation we mean that whenever you use `checkout-summary` in yo
 Therefore, in order to customize the Checkout Summary configuration, you can simply use the default implementation in your code and change it as you wish.
 For more information on which props you need to pass to the Summary component, [see below](#components).
 
+This app exports all of the following blocks. You can see more detailed information of the
+`checkout-summary` and `checkout-summary.compact` blocks in the [Components](#components) section.
+
+```jsonc
+{
+  "checkout-summary": {
+    "props": {
+      "title": "Order Summary"
+    }
+  },
+  "checkout-summary.compact": {
+    "props": {
+      "totalizersToShow": ["Items"]
+    }
+  },
+  "summary-totalizers": {
+    "props": {
+      "showTotal": true,
+      "showDeliveryTotal": true
+    }
+  },
+  "summary-coupon": {
+    // this block doesn't have any props
+  }
+}
+```
+
 Additionally, you can also include a [Drawer](https://vtex.io/docs/components/content-blocks/vtex.store-drawer) inside the `checkout-summary`.
 
 Notice the following: the block declared as children of the `drawer-trigger` block will appear alongside the Summary title.
