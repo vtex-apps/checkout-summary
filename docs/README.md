@@ -173,7 +173,7 @@ The total value of the order. Should be the sum of all totalizers values.
 
 ### SummarySmall
 
-The componente rendered when used the `checkout-summary.compact` block.
+The component rendered when used the `checkout-summary.compact` block.
 
 #### Props
 
