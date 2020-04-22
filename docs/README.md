@@ -16,17 +16,21 @@ Compact version:
 1. Add the Summary app to your theme's dependencies in `manifest.json`. For example:
 
 ```json
+{
   "dependencies": {
     "vtex.checkout-summary": "0.x"
   }
+}
 ```
 
 2. Add the `checkout-summary.compact` block to the `minicart-summary` block of the Minicart or the `checkout-summary` block to the `summary-wrapper` block of the Checkout Cart. For example:
 
 ```json
+{
   "minicart-summary#example": {
     "blocks": ["checkout-summary.compact"]
   }
+}
 ```
 
 ### Advanced Customization
@@ -53,6 +57,101 @@ The `checkout-summary` block is made up of other smaller blocks. Currently, its 
 By default implementation we mean that whenever you use `checkout-summary` in your store you're actually using the `json` above behind the scenes.
 
 Therefore, in order to customize the Checkout Summary configuration, you can simply use the default implementation in your code and change it as you wish.
+For more information on which props you need to pass to the Summary component, [see below](#components).
+
+This app exports all of the following blocks. You can see more detailed information of the
+`checkout-summary` and `checkout-summary.compact` blocks in the [Components](#components) section.
+
+```jsonc
+{
+  "checkout-summary": {
+    "props": {
+      "title": "Order Summary"
+    }
+  },
+  "checkout-summary.compact": {
+    "props": {
+      "totalizersToShow": ["Items"]
+    }
+  },
+  "summary-totalizers": {
+    "props": {
+      "showTotal": true,
+      "showDeliveryTotal": true
+    }
+  },
+  "summary-coupon": {
+    // this block doesn't have any props
+  }
+}
+```
+
+Additionally, you can also include a [Drawer](https://vtex.io/docs/components/content-blocks/vtex.store-drawer) inside the `checkout-summary`.
+
+Notice the following: the block declared as children of the `drawer-trigger` block will appear alongside the Summary title.
+
+```jsonc
+{
+  "checkout-summary": {
+    "blocks": [
+      "drawer#my-drawer"
+    ],
+    "children": [
+      "flex-layout.row#summary-coupon",
+      "summary-totalizers"
+    ]
+  },
+  "drawer#my-drawer": {
+    "blocks": [
+      "drawer-trigger#my-trigger"
+    ]
+  },
+  "drawer-trigger#my-trigger": {
+    "children": [
+      // whatever you put inside here will
+      // appear alongside the summary title
+    ]
+  }
+}
+```
+
+
+### SummarySmall
+
+The component rendered when used the `checkout-summary.compact` block.
+
+#### Props
+
+| Prop name | Type | Required |
+| --- | --- | --- |
+| [`totalizers`](#summarysmall-totalizers) | `array` | `true` |
+| [`totalizersToShow`](#summarysmall-totalizerstoshow) | `array` | `true` |
+| [`total`](#summarysmall-total) | `number` | `true` |
+
+##### SummarySmall totalizers
+
+`Array<{ id: string; value: number | null; name: string }>`
+
+Same as the [Summary totalizers](#summary-totalizers) prop.
+
+##### SummarySmall total
+
+Same as the [Summary total](#summary-total) prop.
+
+##### SummarySmall totalizersToShow
+
+`string[]`
+
+Id of the totalizers that should be displayed inside this component, e.g.:
+
+```js
+[
+  // Value of the subtotal
+  'Items',
+  // Delivery value
+  'Shipping'
+]
+```
 
 ## Customization
 
@@ -79,4 +178,4 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- prettier-ignore-end -->
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!

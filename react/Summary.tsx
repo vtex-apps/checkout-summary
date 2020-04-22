@@ -1,6 +1,7 @@
 import React from 'react'
 import { defineMessages, FormattedMessage } from 'react-intl'
 import { useCssHandles } from 'vtex.css-handles'
+import { ExtensionPoint } from 'vtex.render-runtime'
 
 import SummaryContextProvider from './SummaryContext'
 
@@ -38,8 +39,11 @@ const Summary: StorefrontFunctionComponent<StorefrontSummaryProps> = ({
     >
       {/* Removing the div below may break the layout. See PR #25 */}
       <div>
-        <h5 className={`${handles.summaryTitle} t-heading-5 mt0 mb5`}>
+        <h5
+          className={`${handles.summaryTitle} t-heading-5 mt0 mb5 flex justify-between items-center`}
+        >
           <FormattedMessage id={title} />
+          <ExtensionPoint id="drawer" />
         </h5>
         <div className={`${handles.summaryContent} c-on-base`}>{children}</div>
       </div>
