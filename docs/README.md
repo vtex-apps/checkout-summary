@@ -115,61 +115,6 @@ Notice the following: the block declared as children of the `drawer-trigger` blo
 }
 ```
 
-## Components
-
-### Summary
-
-The wrapper and orchestrator of the inner components of the `checkout-summary` block.
-
-#### Props
-
-| Prop name | Type | Required |
-| --- | --- | --- |
-| [`coupon`](#summary-coupon) | `string` | `false` |
-| [`insertCoupon`](#summary-insertCoupon) | `func` | `false` |
-| [`loading`](#summary-loading) | `boolean` | `false` |
-| [`totalizers`](#summary-totalizers) | `array` | `true` |
-| [`total`](#summary-total) | `number` | `true` |
-
-##### Summary coupon
-
-The value of the coupon displayed inside the input. E.g.: `FIRSTBUY`
-
-##### Summary insertCoupon
-
-`(coupon: string) => Promise<{ success: boolean; errorKey: string }>`
-
-Function used when the user typed in the coupon form and submitted a new value.
-
-##### Summary loading
-
-Whether the submission for a new coupon is still loading.
-
-##### Summary totalizers
-
-`Array<{ id: string; value: number | null; name: string }>`
-
-The totalizers displayed in the summary. Should have at least a `Items` and `Shipping`
-totalizers. E.g.:
-
-```javascript
-[
-  {
-     id: 'Items',
-     name: 'Items total',
-     value: 2000,
-  },
-  {
-     id: 'Shipping',
-     name: 'Shipping total',
-     value: 0,
-  },
-]
-```
-
-##### Summary total
-
-The total value of the order. Should be the sum of all totalizers values.
 
 ### SummarySmall
 
