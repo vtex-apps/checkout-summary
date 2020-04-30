@@ -1,4 +1,8 @@
 {
+  "checkout-summary.compact": {
+    "children": ["summary-totalizers"]
+  }, 
+  
   "checkout-summary": {
     "children": ["flex-layout.row#summary-coupon", "summary-totalizers"]
   },
