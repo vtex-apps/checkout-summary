@@ -8,6 +8,7 @@ interface Props {
   totalizers: Totalizer[]
   total: number
   totalizersToShow: string[]
+  totalCalculation: 'visibleTotalizers' | 'allTotalizers'
 }
 
 const CSS_HANDLES = ['summarySmallContent', 'summarySmallDisclaimer'] as const
@@ -17,6 +18,7 @@ const SummarySmall: FunctionComponent<Props> = ({
   children,
   totalizers,
   totalizersToShow = ['Items'],
+  totalCalculation = 'visibleTotalizers',
 }) => {
   const handles = useCssHandles(CSS_HANDLES)
 
@@ -24,14 +26,28 @@ const SummarySmall: FunctionComponent<Props> = ({
     totalizersToShow.includes(totalizer.id)
   )
 
+  const totalToDisplay =
+    totalCalculation === 'visibleTotalizers'
+      ? filteredTotalizers.reduce((acc, totalizer) => {
+          return (acc += totalizer.value ?? 0)
+        }, 0)
+      : total
+
+  const shouldDisplayShippingDisclaimer = !totalizersToShow.includes('Shipping')
+
   return (
-    <SummaryContextProvider totalizers={filteredTotalizers} total={total}>
+    <SummaryContextProvider
+      totalizers={filteredTotalizers}
+      total={totalToDisplay}
+    >
       <div className={`${handles.summarySmallContent} c-on-base`}>
         {children}
       </div>
-      <span className={`${handles.summarySmallDisclaimer} t-small db mv4`}>
-        <FormattedMessage id="store/checkout-summary.disclaimer" />
-      </span>
+      {shouldDisplayShippingDisclaimer && (
+        <span className={`${handles.summarySmallDisclaimer} t-small db mv4`}>
+          <FormattedMessage id="store/checkout-summary.disclaimer" />
+        </span>
+      )}
     </SummaryContextProvider>
   )
 }
