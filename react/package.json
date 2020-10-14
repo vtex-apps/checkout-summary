@@ -21,7 +21,7 @@
     "@types/react-intl": "^2.3.17",
     "@vtex/test-tools": "^3.1.0",
     "apollo-client": "^2.5.1",
-    "typescript": "3.8.3",
+    "typescript": "3.9.7",
     "vtex.coupon": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.coupon@0.10.1/public/@types/vtex.coupon",
     "vtex.css-handles": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.css-handles@0.4.2/public/@types/vtex.css-handles",
     "vtex.flex-layout": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.flex-layout@0.14.0/public/@types/vtex.flex-layout",
