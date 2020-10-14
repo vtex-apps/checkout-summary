@@ -125,8 +125,9 @@ The component rendered when used the `checkout-summary.compact` block.
 | Prop name | Type | Required |
 | --- | --- | --- |
 | [`totalizers`](#summarysmall-totalizers) | `array` | `true` |
-| [`totalizersToShow`](#summarysmall-totalizerstoshow) | `array` | `true` |
+| [`totalizersToShow`](#summarysmall-totalizersToShow) | `array` | `true` |
 | [`total`](#summarysmall-total) | `number` | `true` |
+| [`totalCalculation`](#summarysmall-totalCalculation) | `enum` | `visibleTotalizers` |
 
 ##### SummarySmall totalizers
 
@@ -137,6 +138,10 @@ Same as the [Summary totalizers](#summary-totalizers) prop.
 ##### SummarySmall total
 
 Same as the [Summary total](#summary-total) prop.
+
+##### SummarySmall totalCalculation
+
+Controls how the `Total` shown in the bottom of the summary is calculated. Possible values are: `visibleTotalizers`, which means that the `Total` shown will only take into account visible totalizers (the ones included in the `totalizersToShow` array), and `allTotalizers`, which will take into account all totalizers from `orderForm`, even if they're not being displayed.
 
 ##### SummarySmall totalizersToShow
 
