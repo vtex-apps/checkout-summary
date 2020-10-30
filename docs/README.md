@@ -115,7 +115,6 @@ Notice the following: the block declared as children of the `drawer-trigger` blo
 }
 ```
 
-
 ### SummarySmall
 
 The component rendered when used the `checkout-summary.compact` block.

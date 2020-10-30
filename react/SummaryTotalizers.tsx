@@ -5,6 +5,7 @@ import SummaryItem from './components/SummaryItem'
 import { useSummary } from './SummaryContext'
 
 const minTotalizerValue = 0
+let minicartTotal = 0
 const tba = null
 const shippingData = {
   id: 'Shipping',
@@ -22,13 +23,28 @@ const SummaryTotalizers: FunctionComponent<SummaryTotalizersProps> = ({
   showDeliveryTotal = true,
 }) => {
   const { loading, totalizers, total } = useSummary()
-
   if (loading) {
     return <Loading />
   }
 
   if (!isShippingPresent(totalizers) && showDeliveryTotal) {
     totalizers.push(shippingData)
+  }
+
+  minicartTotal = total
+  if (!showDeliveryTotal) {
+    let totalizersTotal = 0
+    totalizers.map(
+      t =>
+        (totalizersTotal =
+          t.value !== null && !Number.isNaN(t.value)
+            ? totalizersTotal + t.value
+            : totalizersTotal)
+    )
+
+    if (totalizersTotal !== total) {
+      minicartTotal = totalizersTotal
+    }
   }
 
   return (
@@ -44,7 +60,11 @@ const SummaryTotalizers: FunctionComponent<SummaryTotalizersProps> = ({
       ))}
 
       {showTotal && (
-        <SummaryItem label="Total" value={total || minTotalizerValue} large />
+        <SummaryItem
+          label="Total"
+          value={minicartTotal || minTotalizerValue}
+          large
+        />
       )}
     </Fragment>
   )
