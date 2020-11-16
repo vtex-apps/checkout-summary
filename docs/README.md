@@ -1,6 +1,9 @@
 # Summary
+
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 The Summary block displays the order totalizers and allows the user to add coupon codes. Currently, the Summary block only works out of the box within the [Minicart](https://github.com/vtex-apps/minicart) and the [Checkout Cart](https://github.com/vtex-apps/checkout-cart).
@@ -93,18 +96,11 @@ Notice the following: the block declared as children of the `drawer-trigger` blo
 ```jsonc
 {
   "checkout-summary": {
-    "blocks": [
-      "drawer#my-drawer"
-    ],
-    "children": [
-      "flex-layout.row#summary-coupon",
-      "summary-totalizers"
-    ]
+    "blocks": ["drawer#my-drawer"],
+    "children": ["flex-layout.row#summary-coupon", "summary-totalizers"]
   },
   "drawer#my-drawer": {
-    "blocks": [
-      "drawer-trigger#my-trigger"
-    ]
+    "blocks": ["drawer-trigger#my-trigger"]
   },
   "drawer-trigger#my-trigger": {
     "children": [
@@ -115,18 +111,18 @@ Notice the following: the block declared as children of the `drawer-trigger` blo
 }
 ```
 
-
 ### SummarySmall
 
 The component rendered when used the `checkout-summary.compact` block.
 
 #### Props
 
-| Prop name | Type | Required |
-| --- | --- | --- |
-| [`totalizers`](#summarysmall-totalizers) | `array` | `true` |
-| [`totalizersToShow`](#summarysmall-totalizerstoshow) | `array` | `true` |
-| [`total`](#summarysmall-total) | `number` | `true` |
+| Prop name                                            | Type     | Default             |
+| ---------------------------------------------------- | -------- | ------------------- |
+| [`totalizers`](#summarysmall-totalizers)             | `array`  | `undefined`         |
+| [`totalizersToShow`](#summarysmall-totalizersToShow) | `array`  | `['Items']`         |
+| [`total`](#summarysmall-total)                       | `number` | `undefined`         |
+| [`totalCalculation`](#summarysmall-totalCalculation) | `enum`   | `visibleTotalizers` |
 
 ##### SummarySmall totalizers
 
@@ -137,6 +133,10 @@ Same as the [Summary totalizers](#summary-totalizers) prop.
 ##### SummarySmall total
 
 Same as the [Summary total](#summary-total) prop.
+
+##### SummarySmall totalCalculation
+
+Controls how the `Total` shown in the bottom of the summary is calculated. Possible values are: `visibleTotalizers`, which means that the `Total` shown will only take into account visible totalizers (the ones included in the `totalizersToShow` array), and `allTotalizers`, which will take into account all totalizers from `orderForm`, even if they're not being displayed.
 
 ##### SummarySmall totalizersToShow
 
@@ -149,7 +149,7 @@ Id of the totalizers that should be displayed inside this component, e.g.:
   // Value of the subtotal
   'Items',
   // Delivery value
-  'Shipping'
+  'Shipping',
 ]
 ```
 
@@ -176,6 +176,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
