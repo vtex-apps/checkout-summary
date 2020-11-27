@@ -5426,9 +5426,13 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
-"vtex.coupon@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.coupon@0.10.3/public/@types/vtex.coupon":
-  version "0.10.3"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.coupon@0.10.3/public/@types/vtex.coupon#7767726992b214455a83c5cf3c7b8d3db81c7fed"
+"vtex.checkout-graphql@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-graphql@0.41.0/public/@types/vtex.checkout-graphql":
+  version "0.41.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.checkout-graphql@0.41.0/public/@types/vtex.checkout-graphql#eca2f62e068543f00ec43a949197b6ba647fefb9"
+
+"vtex.coupon@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.coupon@0.10.1/public/@types/vtex.coupon":
+  version "0.10.1"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.coupon@0.10.1/public/@types/vtex.coupon#9d69d24898207f3b8956d0bdede284864ad05e56"
 
 "vtex.css-handles@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.css-handles@0.4.4/public/@types/vtex.css-handles":
   version "0.4.4"
@@ -5445,6 +5449,10 @@ verror@1.10.0:
 "vtex.formatted-price@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.formatted-price@0.4.0/public/@types/vtex.formatted-price":
   version "0.4.0"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.formatted-price@0.4.0/public/@types/vtex.formatted-price#821e3f087065704d02ee28e4f41aada3d6cb46da"
+
+"vtex.native-types@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.native-types@0.7.3/public/@types/vtex.native-types":
+  version "0.7.3"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.native-types@0.7.3/public/@types/vtex.native-types#8b32238685324687995052e8c746449bcc00985c"
 
 "vtex.order-coupon@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.order-coupon@0.7.1/public/@types/vtex.order-coupon":
   version "0.7.1"
