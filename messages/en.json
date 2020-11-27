@@ -6,6 +6,9 @@
   "store/checkout-summary.Summary": "Summary",
   "store/checkout-summary.Total": "Total",
   "store/checkout-summary.disclaimer": "Shipping and taxes calculated at the Cart.",
+  "store/checkout-summary.installments.default": "Up to {installmentsNumber}x {installmentValue}{hasInterest, select, true {, {interestRate} of interest} false { interest-free}}",
+  "admin/editor.checkout-summary.installments.description": "Values available for interpolation: '{installmentsNumber}, {installmentValue}, {installmentsTotalValue}, {interestRate}, {hasInterest}, {paymentSystemName}'",
+  "admin/editor.checkout-summary.installments.title": "Installments",
   "admin/editor.checkout-summary.label": "Summary",
   "admin/editor.checkout-summary.title": "Title"
 }
