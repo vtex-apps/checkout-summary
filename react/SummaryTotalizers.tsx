@@ -1,4 +1,4 @@
-import React, { FunctionComponent, Fragment } from 'react'
+import React, { Fragment } from 'react'
 import { Loading } from 'vtex.render-runtime'
 
 import SummaryItem from './components/SummaryItem'
@@ -14,13 +14,18 @@ const shippingData = {
 }
 
 const isShippingPresent = (totalizers: Totalizer[]) => {
-  return totalizers.some(t => t.id === 'Shipping')
+  return totalizers.some((t) => t.id === 'Shipping')
 }
 
-const SummaryTotalizers: FunctionComponent<SummaryTotalizersProps> = ({
+interface Props {
+  showTotal?: boolean
+  showDeliveryTotal?: boolean
+}
+
+function SummaryTotalizers({
   showTotal = true,
   showDeliveryTotal = true,
-}) => {
+}: Props) {
   const { loading, totalizers, total } = useSummary()
 
   if (loading) {
@@ -33,7 +38,7 @@ const SummaryTotalizers: FunctionComponent<SummaryTotalizersProps> = ({
 
   return (
     <Fragment>
-      {totalizers.map(totalizer => (
+      {totalizers.map((totalizer) => (
         <SummaryItem
           key={totalizer.id}
           label={totalizer.id}
@@ -48,11 +53,6 @@ const SummaryTotalizers: FunctionComponent<SummaryTotalizersProps> = ({
       )}
     </Fragment>
   )
-}
-
-interface SummaryTotalizersProps {
-  showTotal: boolean
-  showDeliveryTotal: boolean
 }
 
 export default SummaryTotalizers

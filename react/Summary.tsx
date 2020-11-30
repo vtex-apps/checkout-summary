@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PropsWithChildren } from 'react'
 import { defineMessages, FormattedMessage } from 'react-intl'
 import { useCssHandles } from 'vtex.css-handles'
 import { ExtensionPoint } from 'vtex.render-runtime'
@@ -8,17 +8,32 @@ import SummaryContextProvider from './SummaryContext'
 const messages = defineMessages({
   label: {
     id: 'admin/editor.checkout-summary.label',
-    defaultMessage: '',
   },
   title: {
     id: 'store/checkout-summary.Summary',
-    defaultMessage: '',
   },
 })
 
 const CSS_HANDLES = ['summaryTitle', 'summaryContent'] as const
 
-const Summary: StorefrontFunctionComponent<StorefrontSummaryProps> = ({
+interface InsertCouponResult {
+  success: boolean
+  errorKey: string
+}
+
+interface SiteEditorSummaryProps {
+  title: string
+}
+
+export interface SummaryProps {
+  coupon?: string
+  insertCoupon?: (coupon: string) => Promise<InsertCouponResult>
+  loading?: boolean
+  totalizers: Totalizer[]
+  total: number
+}
+
+function Summary({
   children,
   loading,
   totalizers,
@@ -26,7 +41,7 @@ const Summary: StorefrontFunctionComponent<StorefrontSummaryProps> = ({
   coupon,
   insertCoupon,
   title,
-}) => {
+}: PropsWithChildren<SummaryProps & SiteEditorSummaryProps>) {
   const handles = useCssHandles(CSS_HANDLES)
 
   return (
@@ -49,23 +64,6 @@ const Summary: StorefrontFunctionComponent<StorefrontSummaryProps> = ({
       </div>
     </SummaryContextProvider>
   )
-}
-
-interface InsertCouponResult {
-  success: boolean
-  errorKey: string
-}
-
-export interface SummaryProps {
-  coupon?: string
-  insertCoupon?: (coupon: string) => Promise<InsertCouponResult>
-  loading?: boolean
-  totalizers: Totalizer[]
-  total: number
-}
-
-interface StorefrontSummaryProps extends SummaryProps {
-  title: string
 }
 
 Summary.schema = {
