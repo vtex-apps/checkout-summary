@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 import { Loading } from 'vtex.render-runtime'
 
 import SummaryItem from './components/SummaryItem'
+import { Totalizer } from './modules/types'
 import { useSummary } from './SummaryContext'
 
 const minTotalizerValue = 0

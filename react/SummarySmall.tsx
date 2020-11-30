@@ -2,6 +2,7 @@ import React, { PropsWithChildren } from 'react'
 import { FormattedMessage } from 'react-intl'
 import { useCssHandles } from 'vtex.css-handles'
 
+import { Totalizer } from './modules/types'
 import SummaryContextProvider from './SummaryContext'
 
 interface Props {

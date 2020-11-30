@@ -3,6 +3,7 @@ import { defineMessages, FormattedMessage } from 'react-intl'
 import { useCssHandles } from 'vtex.css-handles'
 import { ExtensionPoint } from 'vtex.render-runtime'
 
+import { Totalizer } from './modules/types'
 import SummaryContextProvider from './SummaryContext'
 
 const messages = defineMessages({

@@ -66,12 +66,7 @@ function SummaryItem({ label, name, large, value }: Props) {
           large ? 'fw6 fw5-l' : ''
         }`}
       >
-        <FormattedPrice
-          // @ts-expect-error: the component can handle null and
-          // undefined values, but the prop typings are too
-          // strict
-          value={value ? value / 100 : value}
-        />
+        <FormattedPrice value={value ? value / 100 : value} />
       </div>
     </div>
   )
