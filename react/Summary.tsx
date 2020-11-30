@@ -33,6 +33,8 @@ export interface SummaryProps {
   total: number
 }
 
+type Props = PropsWithChildren<SummaryProps & SiteEditorSummaryProps>
+
 function Summary({
   children,
   loading,
@@ -41,7 +43,7 @@ function Summary({
   coupon,
   insertCoupon,
   title,
-}: PropsWithChildren<SummaryProps & SiteEditorSummaryProps>) {
+}: Props) {
   const handles = useCssHandles(CSS_HANDLES)
 
   return (
