@@ -88,7 +88,7 @@ This app exports all of the following blocks. You can see more detailed informat
   },
   "summary-installments": {
     "props": {
-      "message": "",
+      "message": "Up to {installmentsNumber}x {installmentValue}",
       "markers": ""
     }
   }
