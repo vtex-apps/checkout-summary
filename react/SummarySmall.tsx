@@ -1,28 +1,29 @@
-import React, { FunctionComponent } from 'react'
+import React, { PropsWithChildren } from 'react'
 import { FormattedMessage } from 'react-intl'
 import { useCssHandles } from 'vtex.css-handles'
 
+import { Totalizer } from './modules/types'
 import SummaryContextProvider from './SummaryContext'
 
 interface Props {
   totalizers: Totalizer[]
   total: number
-  totalizersToShow: string[]
-  totalCalculation: 'visibleTotalizers' | 'allTotalizers'
+  totalizersToShow?: string[]
+  totalCalculation?: 'visibleTotalizers' | 'allTotalizers'
 }
 
 const CSS_HANDLES = ['summarySmallContent', 'summarySmallDisclaimer'] as const
 
-const SummarySmall: FunctionComponent<Props> = ({
+function SummarySmall({
   total,
   children,
   totalizers,
   totalizersToShow = ['Items'],
   totalCalculation = 'visibleTotalizers',
-}) => {
+}: PropsWithChildren<Props>) {
   const handles = useCssHandles(CSS_HANDLES)
 
-  const filteredTotalizers = totalizers.filter(totalizer =>
+  const filteredTotalizers = totalizers.filter((totalizer) =>
     totalizersToShow.includes(totalizer.id)
   )
 

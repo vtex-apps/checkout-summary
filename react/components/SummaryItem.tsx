@@ -1,9 +1,9 @@
-import React, { FunctionComponent } from 'react'
+import React from 'react'
 import { defineMessages, FormattedMessage } from 'react-intl'
 import { FormattedPrice } from 'vtex.formatted-price'
 import { useCssHandles } from 'vtex.css-handles'
 
-import { slugify } from '../utils/slugify'
+import { slugify } from '../modules/slugify'
 
 defineMessages({
   Shipping: {
@@ -41,12 +41,7 @@ const CSS_HANDLES = [
   'summaryItemPrice',
 ] as const
 
-const SummaryItem: FunctionComponent<Props> = ({
-  label,
-  name,
-  large,
-  value,
-}) => {
+function SummaryItem({ label, name, large, value }: Props) {
   const handles = useCssHandles(CSS_HANDLES)
   const itemId = slugify(label)
 
@@ -71,12 +66,7 @@ const SummaryItem: FunctionComponent<Props> = ({
           large ? 'fw6 fw5-l' : ''
         }`}
       >
-        <FormattedPrice
-          // @ts-ignore: the component can handle null and
-          // undefined values, but the prop typings are too
-          // strict
-          value={value ? value / 100 : value}
-        />
+        <FormattedPrice value={value ? value / 100 : value} />
       </div>
     </div>
   )
