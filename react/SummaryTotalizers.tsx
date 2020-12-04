@@ -1,11 +1,11 @@
-import React, { FunctionComponent, Fragment } from 'react'
+import React, { Fragment } from 'react'
 import { Loading } from 'vtex.render-runtime'
 
 import SummaryItem from './components/SummaryItem'
+import { Totalizer } from './modules/types'
 import { useSummary } from './SummaryContext'
 
 const minTotalizerValue = 0
-let minicartTotal = 0
 const tba = null
 const shippingData = {
   id: 'Shipping',
@@ -15,14 +15,20 @@ const shippingData = {
 }
 
 const isShippingPresent = (totalizers: Totalizer[]) => {
-  return totalizers.some(t => t.id === 'Shipping')
+  return totalizers.some((t) => t.id === 'Shipping')
 }
 
-const SummaryTotalizers: FunctionComponent<SummaryTotalizersProps> = ({
+interface Props {
+  showTotal?: boolean
+  showDeliveryTotal?: boolean
+}
+
+function SummaryTotalizers({
   showTotal = true,
   showDeliveryTotal = true,
-}) => {
+}: Props) {
   const { loading, totalizers, total } = useSummary()
+
   if (loading) {
     return <Loading />
   }
@@ -30,7 +36,7 @@ const SummaryTotalizers: FunctionComponent<SummaryTotalizersProps> = ({
   if (!isShippingPresent(totalizers) && showDeliveryTotal) {
     totalizers.push(shippingData)
   }
-
+  
   minicartTotal = total
   if (!showDeliveryTotal) {
     let totalizersTotal = 0
@@ -47,28 +53,24 @@ const SummaryTotalizers: FunctionComponent<SummaryTotalizersProps> = ({
     }
   }
 
-  if (totalizers.length) {
-    return (
-      <Fragment>
-        {totalizers.map(totalizer => (
-          <SummaryItem
-            key={totalizer.id}
-            label={totalizer.id}
-            name={totalizer.id === 'CustomTax' ? totalizer.name : ''}
-            value={totalizer.value}
-            large={false}
-          />
-        ))}
+if (totalizers.length) {
+  return (
+    <Fragment>
+      {totalizers.map((totalizer) => (
+        <SummaryItem
+          key={totalizer.id}
+          label={totalizer.id}
+          name={totalizer.id === 'CustomTax' ? totalizer.name : ''}
+          value={totalizer.value}
+          large={false}
+        />
+      ))}
 
-        {showTotal && (
-          <SummaryItem
-            label="Total"
-            value={minicartTotal || minTotalizerValue}
-            large
-          />
-        )}
-      </Fragment>
-    )
+      {showTotal && (
+        <SummaryItem label="Total" value={total || minTotalizerValue} large />
+      )}
+    </Fragment>
+  )
   }
 
   return null
