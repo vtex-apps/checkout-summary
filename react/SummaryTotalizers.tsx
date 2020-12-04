@@ -47,27 +47,31 @@ const SummaryTotalizers: FunctionComponent<SummaryTotalizersProps> = ({
     }
   }
 
-  return (
-    <Fragment>
-      {totalizers.map(totalizer => (
-        <SummaryItem
-          key={totalizer.id}
-          label={totalizer.id}
-          name={totalizer.id === 'CustomTax' ? totalizer.name : ''}
-          value={totalizer.value}
-          large={false}
-        />
-      ))}
+  if (totalizers.length) {
+    return (
+      <Fragment>
+        {totalizers.map(totalizer => (
+          <SummaryItem
+            key={totalizer.id}
+            label={totalizer.id}
+            name={totalizer.id === 'CustomTax' ? totalizer.name : ''}
+            value={totalizer.value}
+            large={false}
+          />
+        ))}
 
-      {showTotal && (
-        <SummaryItem
-          label="Total"
-          value={minicartTotal || minTotalizerValue}
-          large
-        />
-      )}
-    </Fragment>
-  )
+        {showTotal && (
+          <SummaryItem
+            label="Total"
+            value={minicartTotal || minTotalizerValue}
+            large
+          />
+        )}
+      </Fragment>
+    )
+  }
+
+  return null
 }
 
 interface SummaryTotalizersProps {

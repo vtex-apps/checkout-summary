@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 ### Fixed
 - Fix total price if `showDeliveryTotal` is set to `false` in `summary-totalizers`
-
+- Show summary section only if exists
 ## [0.16.0] - 2020-04-22
 
 ## [0.15.0] - 2020-01-29
