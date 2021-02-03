@@ -9,6 +9,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Fixed
 - Fix total price if `showDeliveryTotal` is set to `false` in `summary-totalizers`
 - Show summary section only if exists
+
+## [0.17.0] - 2020-11-16
+### Added
+- `totalCalculation` prop to `SummarySmall` component.
+
+### Changed
+- Disclaimer regarding shipping and taxes will only be rendered by `SummarySmall` if the `Shipping` totalizer is not being shown.
+
+
 ## [0.16.0] - 2020-04-22
 
 ## [0.15.0] - 2020-01-29

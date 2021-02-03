@@ -1,7 +1,8 @@
-import React, { FunctionComponent, Fragment } from 'react'
+import React, { Fragment } from 'react'
 import { Loading } from 'vtex.render-runtime'
 
 import SummaryItem from './components/SummaryItem'
+import { Totalizer } from './modules/types'
 import { useSummary } from './SummaryContext'
 
 const minTotalizerValue = 0
@@ -15,14 +16,22 @@ const shippingData = {
 }
 
 const isShippingPresent = (totalizers: Totalizer[]) => {
-  return totalizers.some(t => t.id === 'Shipping')
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
+  return totalizers.some((t: { id: string }) => t.id === 'Shipping')
 }
 
-const SummaryTotalizers: FunctionComponent<SummaryTotalizersProps> = ({
+interface Props {
+  showTotal?: boolean
+  showDeliveryTotal?: boolean
+}
+
+function SummaryTotalizers({
   showTotal = true,
   showDeliveryTotal = true,
-}) => {
-  const { loading, totalizers, total } = useSummary()
+}: Props) {
+  const { loading, totalizers, total }: any = useSummary()
+
   if (loading) {
     return <Loading />
   }
@@ -34,8 +43,9 @@ const SummaryTotalizers: FunctionComponent<SummaryTotalizersProps> = ({
   minicartTotal = total
   if (!showDeliveryTotal) {
     let totalizersTotal = 0
+
     totalizers.map(
-      t =>
+      (t: { value: number | null }) =>
         (totalizersTotal =
           t.value !== null && !Number.isNaN(t.value)
             ? totalizersTotal + t.value
@@ -50,7 +60,7 @@ const SummaryTotalizers: FunctionComponent<SummaryTotalizersProps> = ({
   if (totalizers.length) {
     return (
       <Fragment>
-        {totalizers.map(totalizer => (
+        {totalizers.map((totalizer: any) => (
           <SummaryItem
             key={totalizer.id}
             label={totalizer.id}
@@ -72,11 +82,6 @@ const SummaryTotalizers: FunctionComponent<SummaryTotalizersProps> = ({
   }
 
   return null
-}
-
-interface SummaryTotalizersProps {
-  showTotal: boolean
-  showDeliveryTotal: boolean
 }
 
 export default SummaryTotalizers

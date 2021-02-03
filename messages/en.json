@@ -5,7 +5,7 @@
   "store/checkout-summary.Shipping": "Delivery",
   "store/checkout-summary.Summary": "Summary",
   "store/checkout-summary.Total": "Total",
-  "store/checkout-summary.disclaimer": "Shipping and taxes calculated at checkout.",
+  "store/checkout-summary.disclaimer": "Shipping and taxes calculated at the Cart.",
   "admin/editor.checkout-summary.label": "Summary",
   "admin/editor.checkout-summary.title": "Title"
 }

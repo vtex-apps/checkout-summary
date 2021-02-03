@@ -1,10 +1,10 @@
-import React, { FunctionComponent } from 'react'
+import React from 'react'
 import { ExtensionPoint, Loading } from 'vtex.render-runtime'
 import { OrderCoupon } from 'vtex.order-coupon'
 
 import { useSummary } from './SummaryContext'
 
-const SummaryCoupon: FunctionComponent = () => {
+function SummaryCoupon() {
   const { coupon, insertCoupon, loading } = useSummary()
 
   if (loading) {
