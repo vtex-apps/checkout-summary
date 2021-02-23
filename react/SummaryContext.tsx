@@ -18,6 +18,7 @@ function SummaryContextProvider({
   coupon,
   insertCoupon,
   loading,
+  paymentData,
   totalizers,
   total,
   children,
@@ -28,6 +29,7 @@ function SummaryContextProvider({
         coupon,
         insertCoupon,
         loading,
+        paymentData,
         totalizers,
         total,
       }}
