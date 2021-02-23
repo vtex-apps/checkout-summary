@@ -17,7 +17,7 @@ const CSS_HANDLES = [
   'paymentSystemName',
 ] as const
 
-const SummaryInstallments: StorefrontFunctionComponent<SummaryInstallmentsProps> = props => {
+function SummaryInstallments(props: SummaryInstallmentsProps) {
   const { loading, paymentData } = useSummary()
   const { message, markers } = props
   const handles = useCssHandles(CSS_HANDLES)
@@ -34,9 +34,10 @@ const SummaryInstallments: StorefrontFunctionComponent<SummaryInstallmentsProps>
 
   let maxInstallments: InstallmentOption | undefined
 
-  installmentOptions.forEach(installmentOption => {
+  installmentOptions.forEach((installmentOption) => {
     const currentValueIsEmpty =
       !maxInstallments || Object.keys(maxInstallments).length === 0
+
     if (
       currentValueIsEmpty ||
       installmentOption.installments.length >
