@@ -46,11 +46,13 @@ function SummaryTotalizers({
           name={totalizer.id === 'CustomTax' ? totalizer.name : ''}
           value={totalizer.value}
           large={false}
+          totalizers
         />
       ))}
 
       {showTotal && (
-        <SummaryItem label="Total" value={total || minTotalizerValue} large />
+        
+        <SummaryItem label="Total" totalizers={totalizers} value={total || minTotalizerValue} large />
       )}
     </Fragment>
   )

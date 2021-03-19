@@ -32,6 +32,7 @@ interface Props {
   label: string
   name?: string
   large: boolean
+  totalizers: any
   value: number | null
 }
 
@@ -41,10 +42,10 @@ const CSS_HANDLES = [
   'summaryItemPrice',
 ] as const
 
-function SummaryItem({ label, name, large, value }: Props) {
+function SummaryItem({ totalizers, label, name, large, value }: Props) {
   const handles = useCssHandles(CSS_HANDLES)
   const itemId = slugify(label)
-
+  
   return (
     <div
       className={`flex w-100 c-on-base lh-copy items-center ${
@@ -66,7 +67,7 @@ function SummaryItem({ label, name, large, value }: Props) {
           large ? 'fw6 fw5-l' : ''
         }`}
       >
-        <FormattedPrice value={value ? value / 100 : value} />
+        <FormattedPrice value={totalizers.length ? (value ? value / 100 : value) : null} />
       </div>
     </div>
   )

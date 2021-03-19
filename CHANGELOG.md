@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Fixed
+- When a cart cannot be delivered, it shows the total as "FREE". The fix checks if the cart is actually free or just can't be delivered.
+
 ## [0.17.0] - 2020-11-16
 ### Added
 - `totalCalculation` prop to `SummarySmall` component.
