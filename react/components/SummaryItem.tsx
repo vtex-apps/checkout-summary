@@ -4,7 +4,6 @@ import { FormattedPrice } from 'vtex.formatted-price'
 import { useCssHandles } from 'vtex.css-handles'
 
 import { slugify } from '../modules/slugify'
-import { Totalizer } from '../modules/types'
 
 defineMessages({
   Shipping: {
@@ -33,7 +32,6 @@ interface Props {
   label: string
   name?: string
   large: boolean
-  totalizers: Totalizer[]
   value: number | null
 }
 
@@ -43,7 +41,7 @@ const CSS_HANDLES = [
   'summaryItemPrice',
 ] as const
 
-function SummaryItem({ totalizers, label, name, large, value }: Props) {
+function SummaryItem({ label, name, large, value }: Props) {
   const handles = useCssHandles(CSS_HANDLES)
   const itemId = slugify(label)
 
@@ -68,9 +66,7 @@ function SummaryItem({ totalizers, label, name, large, value }: Props) {
           large ? 'fw6 fw5-l' : ''
         }`}
       >
-        <FormattedPrice
-          value={totalizers.length ? (value ? value / 100 : value) : null}
-        />
+        <FormattedPrice value={value ? value / 100 : value} />
       </div>
     </div>
   )
