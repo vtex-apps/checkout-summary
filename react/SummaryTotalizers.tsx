@@ -51,8 +51,12 @@ function SummaryTotalizers({
       ))}
 
       {showTotal && (
-        
-        <SummaryItem label="Total" totalizers={totalizers} value={total || minTotalizerValue} large />
+        <SummaryItem
+          label="Total"
+          totalizers={totalizers}
+          value={total || minTotalizerValue}
+          large
+        />
       )}
     </Fragment>
   )
