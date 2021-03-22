@@ -37,6 +37,8 @@ function SummaryTotalizers({
     totalizers.push(shippingData)
   }
 
+  const orderHasNoValue = totalizers.length === 0
+
   return (
     <Fragment>
       {totalizers.map((totalizer) => (
@@ -50,7 +52,11 @@ function SummaryTotalizers({
       ))}
 
       {showTotal && (
-        <SummaryItem label="Total" value={total || minTotalizerValue} large />
+        <SummaryItem
+          label="Total"
+          value={orderHasNoValue ? null : total || minTotalizerValue}
+          large
+        />
       )}
     </Fragment>
   )
