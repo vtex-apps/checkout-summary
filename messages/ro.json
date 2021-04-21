@@ -1,0 +1,11 @@
+{
+  "store/checkout-summary.Discounts": "Discounturi",
+  "store/checkout-summary.Tax": "Taxe",
+  "store/checkout-summary.Items": "Subtotal",
+  "store/checkout-summary.Shipping": "Livrare",
+  "store/checkout-summary.Summary": "Sumar",
+  "store/checkout-summary.Total": "Total",
+  "store/checkout-summary.disclaimer": "Costurile de transport și taxele sunt calculate la Coș.",
+  "admin/editor.checkout-summary.label": "Sumar",
+  "admin/editor.checkout-summary.title": "Titlu"
+}

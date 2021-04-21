@@ -1,0 +1,11 @@
+{
+  "store/checkout-summary.Discounts": "Rabatter",
+  "store/checkout-summary.Tax": "Moms",
+  "store/checkout-summary.Items": "Subtotal",
+  "store/checkout-summary.Shipping": "Levering",
+  "store/checkout-summary.Summary": "Opsummering",
+  "store/checkout-summary.Total": "I alt",
+  "store/checkout-summary.disclaimer": "Forsendelse og afgifter beregnet i indkøbskurven.",
+  "admin/editor.checkout-summary.label": "Opsummering",
+  "admin/editor.checkout-summary.title": "Titel"
+}

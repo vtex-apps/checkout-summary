@@ -1,0 +1,11 @@
+{
+  "store/checkout-summary.Discounts": "Εκπτώσεις",
+  "store/checkout-summary.Tax": "Φόροι",
+  "store/checkout-summary.Items": "Υποσύνολο",
+  "store/checkout-summary.Shipping": "Παράδοση",
+  "store/checkout-summary.Summary": "Περίληψη",
+  "store/checkout-summary.Total": "Σύνολο",
+  "store/checkout-summary.disclaimer": "Μεταφορικά και φόροι υπολογίστηκαν στο Καρότσι.",
+  "admin/editor.checkout-summary.label": "Περίληψη",
+  "admin/editor.checkout-summary.title": "Τίτλος"
+}
