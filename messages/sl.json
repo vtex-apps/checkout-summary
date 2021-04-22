@@ -1,0 +1,11 @@
+{
+  "store/checkout-summary.Discounts": "Popusti",
+  "store/checkout-summary.Tax": "Davki",
+  "store/checkout-summary.Items": "Skupaj",
+  "store/checkout-summary.Shipping": "Dobava",
+  "store/checkout-summary.Summary": "Povzetek",
+  "store/checkout-summary.Total": "Skupaj",
+  "store/checkout-summary.disclaimer": "Dostava in davki, izračunani v košarici.",
+  "admin/editor.checkout-summary.label": "Povzetek",
+  "admin/editor.checkout-summary.title": "Naziv"
+}
