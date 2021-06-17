@@ -7,7 +7,7 @@
   "store/checkout-summary.Total": "Total",
   "store/checkout-summary.disclaimer": "Taxas e frete calculados no Carrinho",
   "store/checkout-summary.installments.default": "Em até {installmentsNumber}x {installmentValue}{hasInterest, select, true {, {interestRate} de juros} false { sem juros}}",
-  "admin/editor.checkout-summary.installments.description": "Valores disponiveis para interpolação: '{installmentsNumber}, {installmentValue}, {installmentsTotalValue}, {interestRate}, {hasInterest}, {paymentSystemName}'",
+  "admin/editor.checkout-summary.installments.description": "Valores disponíveis para interpolação: '{installmentsNumber}, {installmentValue}, {installmentsTotalValue}, {interestRate}, {hasInterest}, {paymentSystemName}'",
   "admin/editor.checkout-summary.installments.title": "Parcelamento",
   "admin/editor.checkout-summary.label": "Resumo",
   "admin/editor.checkout-summary.title": "Título"
