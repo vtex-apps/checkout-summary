@@ -21,6 +21,7 @@ function SummaryContextProvider({
   totalizers,
   total,
   children,
+  paymentData,
 }: PropsWithChildren<SummaryProps>) {
   return (
     <SummaryContext.Provider
@@ -30,6 +31,7 @@ function SummaryContextProvider({
         loading,
         totalizers,
         total,
+        paymentData,
       }}
     >
       {children}
