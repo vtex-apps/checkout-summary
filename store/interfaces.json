@@ -39,5 +39,11 @@
         "paragraph": false
       }
     }
+  },
+  "summary-installments": {
+    "component": "SummaryInstallments",
+    "content": {
+      "$ref": "app:vtex.checkout-summary#/definitions/SummaryInstallments"
+    }
   }
 }

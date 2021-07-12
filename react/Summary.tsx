@@ -2,6 +2,7 @@ import React, { PropsWithChildren } from 'react'
 import { defineMessages, FormattedMessage } from 'react-intl'
 import { useCssHandles } from 'vtex.css-handles'
 import { ExtensionPoint } from 'vtex.render-runtime'
+import { PaymentData } from 'vtex.checkout-graphql'
 
 import { Totalizer } from './modules/types'
 import SummaryContextProvider from './SummaryContext'
@@ -31,6 +32,7 @@ export interface SummaryProps {
   insertCoupon?: (coupon: string) => Promise<InsertCouponResult>
   loading?: boolean
   totalizers: Totalizer[]
+  paymentData: PaymentData
   total: number
 }
 
@@ -44,6 +46,7 @@ function Summary({
   coupon,
   insertCoupon,
   title,
+  paymentData,
 }: Props) {
   const handles = useCssHandles(CSS_HANDLES)
 
@@ -54,6 +57,7 @@ function Summary({
       loading={loading}
       totalizers={totalizers}
       total={total}
+      paymentData={paymentData}
     >
       {/* Removing the div below may break the layout. See PR #25 */}
       <div>
