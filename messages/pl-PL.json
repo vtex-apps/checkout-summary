@@ -1,0 +1,11 @@
+{
+  "store/checkout-summary.Discounts": "Zniżki",
+  "store/checkout-summary.Tax": "Podatki",
+  "store/checkout-summary.Items": "Podsuma",
+  "store/checkout-summary.Shipping": "Dostawa",
+  "store/checkout-summary.Summary": "Podsumowanie",
+  "store/checkout-summary.Total": "Suma",
+  "store/checkout-summary.disclaimer": "Wysyłka i podatki obliczone w Koszyku.",
+  "admin/editor.checkout-summary.label": "Podsumowanie",
+  "admin/editor.checkout-summary.title": "Tytuł"
+}
