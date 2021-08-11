@@ -1,0 +1,11 @@
+{
+  "store/checkout-summary.Discounts": "Kortingen",
+  "store/checkout-summary.Tax": "Belastingen",
+  "store/checkout-summary.Items": "Subtotaal",
+  "store/checkout-summary.Shipping": "Levering",
+  "store/checkout-summary.Summary": "Overzicht",
+  "store/checkout-summary.Total": "Totaal",
+  "store/checkout-summary.disclaimer": "Verzendings- en belastingkosten worden in de winkelwagen berekend.",
+  "admin/editor.checkout-summary.label": "Overzicht",
+  "admin/editor.checkout-summary.title": "Titel"
+}
