@@ -1,0 +1,11 @@
+{
+  "store/checkout-summary.Discounts": "Kedvezmények",
+  "store/checkout-summary.Tax": "Adók",
+  "store/checkout-summary.Items": "Részösszeg",
+  "store/checkout-summary.Shipping": "Kézbesítés",
+  "store/checkout-summary.Summary": "Összegzés",
+  "store/checkout-summary.Total": "Összesen",
+  "store/checkout-summary.disclaimer": "A szállítás és adók a kosárban kerülnek kiszámításra.",
+  "admin/editor.checkout-summary.label": "Összegzés",
+  "admin/editor.checkout-summary.title": "Cím"
+}

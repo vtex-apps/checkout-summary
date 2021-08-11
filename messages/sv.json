@@ -7,5 +7,5 @@
   "store/checkout-summary.Total": "Totalt",
   "store/checkout-summary.disclaimer": "Frakt och moms beräknas i kundvagnen.",
   "admin/editor.checkout-summary.label": "Summering",
-  "admin/editor.checkout-summary.title": "Titel"
+  "admin/editor.checkout-summary.title": "Rubrik"
 }
