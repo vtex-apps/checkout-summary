@@ -1,0 +1,11 @@
+{
+  "store/checkout-summary.Discounts": "Descontos",
+  "store/checkout-summary.Tax": "Impostos",
+  "store/checkout-summary.Items": "Subtotal",
+  "store/checkout-summary.Shipping": "Entrega em casa",
+  "store/checkout-summary.Summary": "Resumo",
+  "store/checkout-summary.Total": "Total",
+  "store/checkout-summary.disclaimer": "Taxas e frete calculados no Carrinho",
+  "admin/editor.checkout-summary.label": "Resumo",
+  "admin/editor.checkout-summary.title": "Título"
+}
