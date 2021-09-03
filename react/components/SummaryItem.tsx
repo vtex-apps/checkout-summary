@@ -4,6 +4,7 @@ import { FormattedPrice } from 'vtex.formatted-price'
 import { useCssHandles } from 'vtex.css-handles'
 
 import { slugify } from '../modules/slugify'
+import LeafIcon from './LeafIcon'
 
 defineMessages({
   Shipping: {
@@ -13,6 +14,10 @@ defineMessages({
   Items: {
     id: 'store/checkout-summary.Items',
     defaultMessage: 'Subtotal',
+  },
+  CarbonEstimate: {
+    id: 'store/checkout-summary.CarbonEstimate',
+    defaultMessage: 'Green Shipping',
   },
   Total: {
     id: 'store/checkout-summary.Total',
@@ -51,14 +56,16 @@ function SummaryItem({ label, name, large, value }: Props) {
         handles.summaryItemContainer
       } ${large ? 'f4 mt4 pb5' : 'mt3'}`}
     >
-      <div
-        id={itemId}
-        className={`${handles.summaryItemLabel} flex-none fw6 fw5-l`}
-      >
+      <div id={itemId} className={`${handles.summaryItemLabel} flex fw6 fw5-l`}>
         {name ||
           (label && (
             <FormattedMessage id={`store/checkout-summary.${label}`} />
           ))}
+        {label === 'CarbonEstimate' && (
+          <div className="ml3">
+            <LeafIcon />
+          </div>
+        )}
       </div>
       <div
         id={`${itemId}-price`}
