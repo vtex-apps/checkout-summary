@@ -5,7 +5,7 @@
   "store/checkout-summary.Shipping": "Entrega",
   "store/checkout-summary.Summary": "Resumen",
   "store/checkout-summary.Total": "Total",
-  "store/checkout-summary.disclaimer": "Gastos de envío e impuestos calculados en el Carrito",
+  "store/checkout-summary.disclaimer": "Tasas y fletes calculados en el carrito",
   "admin/editor.checkout-summary.label": "Resumen",
   "admin/editor.checkout-summary.title": "Título",
   "store/checkout-summary.installments.default": "Hasta {installmentsNumber}x {installmentValue}{hasInterest, select, true {, {interestRate} de interés} false { sin interés}}",
