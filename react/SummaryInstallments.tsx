@@ -17,6 +17,11 @@ const CSS_HANDLES = [
   'paymentSystemName',
 ] as const
 
+interface SummaryInstallmentsProps {
+  message: string
+  markers: string[]
+}
+
 function SummaryInstallments(props: SummaryInstallmentsProps) {
   const { loading, paymentData } = useSummary()
   const { message, markers } = props
@@ -47,15 +52,17 @@ function SummaryInstallments(props: SummaryInstallmentsProps) {
     }
   })
 
-  const maxInstallment: Installment | undefined =
+  const maxInstallment: Installment =
     maxInstallments?.installments[maxInstallments?.installments.length - 1]
 
-  const installmentsNumber = maxInstallment?.count
-  const installmentValue = maxInstallment?.value
-  const installmentsTotalValue = maxInstallment?.total
-  const interestRate = maxInstallment?.interestRate
-  const paymentSystemName = maxInstallments?.paymentSystem
-  const hasInterest = maxInstallment?.hasInterestRate
+  const {
+    count,
+    value,
+    total,
+    interestRate,
+    paymentSystem,
+    hasInterestRate,
+  } = maxInstallment
 
   return (
     <span className={handles.installments}>
@@ -69,16 +76,12 @@ function SummaryInstallments(props: SummaryInstallmentsProps) {
               key="installmentsNumber"
               className={handles.installmentsNumber}
             >
-              {installmentsNumber && (
-                <FormattedNumber value={installmentsNumber} />
-              )}
+              {count && <FormattedNumber value={count} />}
             </span>
           ),
           installmentValue: (
             <span key="installmentValue" className={handles.installmentValue}>
-              {installmentValue && (
-                <FormattedCurrency value={installmentValue / 100} />
-              )}
+              {value && <FormattedCurrency value={value / 100} />}
             </span>
           ),
           installmentsTotalValue: (
@@ -86,9 +89,7 @@ function SummaryInstallments(props: SummaryInstallmentsProps) {
               key="installmentsTotalValue"
               className={handles.installmentsTotalValue}
             >
-              {installmentsTotalValue && (
-                <FormattedCurrency value={installmentsTotalValue / 100} />
-              )}
+              {total && <FormattedCurrency value={total / 100} />}
             </span>
           ),
           interestRate: (
@@ -100,10 +101,10 @@ function SummaryInstallments(props: SummaryInstallmentsProps) {
           ),
           paymentSystemName: (
             <span key="paymentSystemName" className={handles.paymentSystemName}>
-              {paymentSystemName}
+              {paymentSystem}
             </span>
           ),
-          hasInterest,
+          hasInterest: hasInterestRate,
         }}
       />
     </span>
@@ -124,11 +125,6 @@ const messages = defineMessages({
 
 SummaryInstallments.schema = {
   title: messages.title.id,
-}
-
-interface SummaryInstallmentsProps {
-  message: string
-  markers: string[]
 }
 
 export default SummaryInstallments
