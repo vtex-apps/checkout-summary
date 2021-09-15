@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 
 ### Added
-- IT translations.
+- i18n It. 
 
 ## [0.18.0] - 2021-04-22
 
