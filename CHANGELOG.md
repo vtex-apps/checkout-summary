@@ -8,8 +8,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ## [Unreleased]
 
 ### Added 
-
 - Summary Installments block
+
+## [0.18.1] - 2021-09-17
+
+### Added
+- IT translations.
 
 ## [0.18.0] - 2021-04-22
 
