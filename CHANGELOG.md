@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+- I18n Ar, Ca, Cs, De, Hu, Pl, Ru.
+
+### Changed
+- I18n Sv.
+
 ## [0.18.1] - 2021-09-17
 
 ### Added
