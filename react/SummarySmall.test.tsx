@@ -16,7 +16,7 @@ test('should render shipping disclaimer if shipping totalizer is not shown', () 
     <SummarySmall total={32999} totalizers={totalizers} />
   )
 
-  const disclaimer = queryByText('Shipping and taxes calculated at the Cart.')
+  const disclaimer = queryByText('Shipping and taxes calculated in the Cart.')
 
   expect(disclaimer).toBeInTheDocument()
 })

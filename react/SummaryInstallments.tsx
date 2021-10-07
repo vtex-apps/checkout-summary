@@ -1,6 +1,6 @@
 import React from 'react'
 import { defineMessages, FormattedNumber } from 'react-intl'
-import { Installment, InstallmentOption } from 'vtex.checkout-graphql'
+import { InstallmentOption } from 'vtex.checkout-graphql'
 import { useCssHandles } from 'vtex.css-handles'
 import { FormattedCurrency } from 'vtex.format-currency'
 import { IOMessageWithMarkers } from 'vtex.native-types'
@@ -27,7 +27,7 @@ function SummaryInstallments(props: SummaryInstallmentsProps) {
   const { message, markers } = props
   const handles = useCssHandles(CSS_HANDLES)
 
-  const { installmentOptions } = paymentData
+  const { installmentOptions, paymentSystems } = paymentData
 
   if (loading) {
     return <Loading />
@@ -52,17 +52,14 @@ function SummaryInstallments(props: SummaryInstallmentsProps) {
     }
   })
 
-  const maxInstallment: Installment =
+  const maxInstallment: any =
     maxInstallments?.installments[maxInstallments?.installments.length - 1]
 
-  const {
-    count,
-    value,
-    total,
-    interestRate,
-    paymentSystem,
-    hasInterestRate,
-  } = maxInstallment
+  const paymentSystemName = paymentSystems.filter(
+    (paymentSystem) => paymentSystem.id === maxInstallments?.paymentSystem
+  )
+
+  const { count, value, total, interestRate, hasInterestRate } = maxInstallment
 
   return (
     <span className={handles.installments}>
@@ -101,7 +98,7 @@ function SummaryInstallments(props: SummaryInstallmentsProps) {
           ),
           paymentSystemName: (
             <span key="paymentSystemName" className={handles.paymentSystemName}>
-              {paymentSystem}
+              {paymentSystemName[0]?.name}
             </span>
           ),
           hasInterest: hasInterestRate,
