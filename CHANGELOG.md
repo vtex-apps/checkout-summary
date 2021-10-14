@@ -7,32 +7,40 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
-### Added 
+### Added
+
 - Summary Installments block
 
 ## [0.18.1] - 2021-09-17
 
 ### Added
+
 - IT translations.
 
 ## [0.18.0] - 2021-04-22
 
 ### Added
+
 - New translations.
 
 ### Changed
+
 - Crowdin configuration file.
 
 ## [0.17.1] - 2021-03-22
 
 ### Fixed
+
 - When a cart cannot be delivered, it shows the total as "FREE". The fix checks if the cart is actually free or just can't be delivered.
 
 ## [0.17.0] - 2020-11-16
+
 ### Added
+
 - `totalCalculation` prop to `SummarySmall` component.
 
 ### Changed
+
 - Disclaimer regarding shipping and taxes will only be rendered by `SummarySmall` if the `Shipping` totalizer is not being shown.
 
 ## [0.16.0] - 2020-04-22
