@@ -5,7 +5,10 @@
   "store/checkout-summary.Shipping": "Entrega",
   "store/checkout-summary.Summary": "Resumen",
   "store/checkout-summary.Total": "Total",
-  "store/checkout-summary.disclaimer": "Gastos de envío e impuestos calculados al finalizar la compra.",
+  "store/checkout-summary.disclaimer": "Tasas y fletes calculados en el carrito",
   "admin/editor.checkout-summary.label": "Resumen",
-  "admin/editor.checkout-summary.title": "Título"
+  "admin/editor.checkout-summary.title": "Título",
+  "store/checkout-summary.installments.default": "Hasta {installmentsNumber}x {installmentValue}{hasInterest, select, true {, {interestRate} de interés} false { sin interés}}",
+  "admin/editor.checkout-summary.installments.description": "Valores disponibles para interpolación: '{installmentsNumber}, {installmentValue}, {installmentsTotalValue}, {interestRate}, {hasInterest}, {paymentSystemName}'",
+  "admin/editor.checkout-summary.installments.title": "Cuotas"
 }

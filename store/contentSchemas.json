@@ -7,6 +7,17 @@
           "default": "store/checkout-summary.Summary"
         }
       }
+    },
+    "SummaryInstallments": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "title": "admin/editor.checkout-summary.installments.title",
+          "description": "admin/editor.checkout-summary.installments.description",
+          "$ref": "app:vtex.native-types#/definitions/text",
+          "default": "store/checkout-summary.installments.default"
+        }
+      }
     }
   }
 }

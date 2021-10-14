@@ -1,6 +1,7 @@
 import React, { PropsWithChildren } from 'react'
 import { FormattedMessage } from 'react-intl'
 import { useCssHandles } from 'vtex.css-handles'
+import { PaymentData } from 'vtex.checkout-graphql'
 
 import { Totalizer } from './modules/types'
 import SummaryContextProvider from './SummaryContext'
@@ -10,6 +11,7 @@ interface Props {
   total: number
   totalizersToShow?: string[]
   totalCalculation?: 'visibleTotalizers' | 'allTotalizers'
+  paymentData: PaymentData
 }
 
 const CSS_HANDLES = ['summarySmallContent', 'summarySmallDisclaimer'] as const
@@ -20,6 +22,7 @@ function SummarySmall({
   totalizers,
   totalizersToShow = ['Items'],
   totalCalculation = 'visibleTotalizers',
+  paymentData,
 }: PropsWithChildren<Props>) {
   const handles = useCssHandles(CSS_HANDLES)
 
@@ -40,6 +43,7 @@ function SummarySmall({
     <SummaryContextProvider
       totalizers={filteredTotalizers}
       total={totalToDisplay}
+      paymentData={paymentData}
     >
       <div className={`${handles.summarySmallContent} c-on-base`}>
         {children}
