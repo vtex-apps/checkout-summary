@@ -1,0 +1,11 @@
+{
+  "store/checkout-summary.Discounts": "Скидки",
+  "store/checkout-summary.Tax": "Налоги",
+  "store/checkout-summary.Items": "Промежуточный итог",
+  "store/checkout-summary.Shipping": "Доставка",
+  "store/checkout-summary.Summary": "Содержание",
+  "store/checkout-summary.Total": "Всего",
+  "store/checkout-summary.disclaimer": "Стоимость доставки и налоги рассчитываются в корзине.",
+  "admin/editor.checkout-summary.label": "Содержание",
+  "admin/editor.checkout-summary.title": "Название"
+}

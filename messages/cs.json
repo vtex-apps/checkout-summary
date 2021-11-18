@@ -1,0 +1,11 @@
+{
+  "store/checkout-summary.Discounts": "Slevy",
+  "store/checkout-summary.Tax": "Daně",
+  "store/checkout-summary.Items": "Mezisoučet",
+  "store/checkout-summary.Shipping": "Doručení",
+  "store/checkout-summary.Summary": "Souhrn",
+  "store/checkout-summary.Total": "Celkem",
+  "store/checkout-summary.disclaimer": "Poštovné a daně vypočtené v košíku.",
+  "admin/editor.checkout-summary.label": "Souhrn",
+  "admin/editor.checkout-summary.title": "Název"
+}

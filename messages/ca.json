@@ -1,0 +1,11 @@
+{
+  "store/checkout-summary.Discounts": "Descomptes",
+  "store/checkout-summary.Tax": "Impostos",
+  "store/checkout-summary.Items": "Subtotal",
+  "store/checkout-summary.Shipping": "Lliurament",
+  "store/checkout-summary.Summary": "Resum",
+  "store/checkout-summary.Total": "Total",
+  "store/checkout-summary.disclaimer": "Les despeses de lliurament i els impostos es calculen al carretó.",
+  "admin/editor.checkout-summary.label": "Resum",
+  "admin/editor.checkout-summary.title": "Títol"
+}
