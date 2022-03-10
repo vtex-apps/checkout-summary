@@ -1,0 +1,11 @@
+{
+  "store/checkout-summary.Discounts": "Rabatter",
+  "store/checkout-summary.Tax": "Skatter",
+  "store/checkout-summary.Items": "Delsum",
+  "store/checkout-summary.Shipping": "Levering",
+  "store/checkout-summary.Summary": "Sammendrag",
+  "store/checkout-summary.Total": "Total",
+  "store/checkout-summary.disclaimer": "Frakt og avgifter beregnes i handlekurven.",
+  "admin/editor.checkout-summary.label": "Sammendrag",
+  "admin/editor.checkout-summary.title": "Tittel"
+}
