@@ -1,8 +1,8 @@
 {
-  "store/checkout-summary.Discounts": "التخفيضات",
+  "store/checkout-summary.Discounts": "الخصم",
   "store/checkout-summary.Tax": "الضرائب",
-  "store/checkout-summary.Items": "المجموع الفرعي",
-  "store/checkout-summary.Shipping": "التسليم",
+  "store/checkout-summary.Items": "تكلفة الطلب",
+  "store/checkout-summary.Shipping": "تكلفة التوصيل",
   "store/checkout-summary.Summary": "الملخص",
   "store/checkout-summary.Total": "المجموع",
   "store/checkout-summary.disclaimer": "الشحن والضرائب المحسوبة في سلة التسوق.",
