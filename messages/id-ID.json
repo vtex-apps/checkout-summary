@@ -1,0 +1,14 @@
+{
+  "store/checkout-summary.Discounts": "Diskon",
+  "store/checkout-summary.Tax": "Pajak",
+  "store/checkout-summary.Items": "Subtotal",
+  "store/checkout-summary.Shipping": "Pengiriman",
+  "store/checkout-summary.Summary": "Ringkasan",
+  "store/checkout-summary.Total": "Total",
+  "store/checkout-summary.disclaimer": "Pengiriman dan pajak dihitung di Troli.",
+  "admin/editor.checkout-summary.label": "Ringkasan",
+  "admin/editor.checkout-summary.title": "Judul",
+  "store/checkout-summary.installments.default": "Hingga {installmentsNumber}x {installmentValue}{hasInterest, select, true {, {interestRate} bunga} false { interest-free}}",
+  "admin/editor.checkout-summary.installments.description": "Nilai tersedia untuk interpolasi: '{installmentsNumber}, {installmentValue}, {installmentsTotalValue}, {interestRate}, {hasInterest}, {paymentSystemName}'",
+  "admin/editor.checkout-summary.installments.title": "Cicilan"
+}
