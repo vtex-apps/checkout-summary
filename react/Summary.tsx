@@ -34,6 +34,7 @@ export interface SummaryProps {
   totalizers: Totalizer[]
   paymentData: PaymentData
   total: number
+  originalTotal?: number
 }
 
 type Props = PropsWithChildren<SummaryProps & SiteEditorSummaryProps>
@@ -43,6 +44,7 @@ function Summary({
   loading,
   totalizers,
   total,
+  originalTotal = 0,
   coupon,
   insertCoupon,
   title,
@@ -57,6 +59,7 @@ function Summary({
       loading={loading}
       totalizers={totalizers}
       total={total}
+      originalTotal={originalTotal}
       paymentData={paymentData}
     >
       {/* Removing the div below may break the layout. See PR #25 */}

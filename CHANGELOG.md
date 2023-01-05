@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+### Added
+
+- Optional feature to display the original items subtotal (sum of list prices) in the same row as the items subtotal
+
 ## [0.22.0] - 2022-12-23
 
 ### Added

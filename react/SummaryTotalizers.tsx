@@ -21,13 +21,15 @@ const isShippingPresent = (totalizers: Totalizer[]) => {
 interface Props {
   showTotal?: boolean
   showDeliveryTotal?: boolean
+  showOriginalTotal?: boolean
 }
 
 function SummaryTotalizers({
   showTotal = true,
   showDeliveryTotal = true,
+  showOriginalTotal = false,
 }: Props) {
-  const { loading, totalizers, total } = useSummary()
+  const { loading, totalizers, total, originalTotal } = useSummary()
 
   if (loading) {
     return <Loading />
@@ -47,6 +49,7 @@ function SummaryTotalizers({
           label={totalizer.id}
           name={totalizer.id === 'CustomTax' ? totalizer.name : ''}
           value={totalizer.value}
+          originalValue={showOriginalTotal ? originalTotal : 0}
           large={false}
         />
       ))}
