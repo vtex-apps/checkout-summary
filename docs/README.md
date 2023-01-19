@@ -63,7 +63,7 @@ Therefore, in order to customize the Checkout Summary configuration, you can sim
 For more information on which props you need to pass to the Summary component, [see below](#components).
 
 This app exports all of the following blocks. You can see more detailed information of the
-`checkout-summary` and `checkout-summary.compact` blocks in the [Components](#components) section.
+`checkout-summary`, `checkout-summary.compact`, and `summary-totalizers` blocks in the [Components](#components) section.
 
 ```jsonc
 {
@@ -117,6 +117,20 @@ Notice the following: the block declared as children of the `drawer-trigger` blo
   }
 }
 ```
+
+## Components
+
+### SummaryTotalizers
+
+The component rendered when the `summary-totalizers` block is used.
+
+#### Props
+
+| Prop name           | Type      | Default | Description                                                                                      |
+| ------------------- | --------- | ------- | ------------------------------------------------------------------------------------------------ |
+| `showTotal`         | `boolean` | `true`  | Whether to display the overall order total                                                       |
+| `showDeliveryTotal` | `boolean` | `true`  | Whether to display the shipping/delivery total                                                   |
+| `showOriginalTotal` | `boolean` | `false` | Whether to display the original items value (sum of item list prices) next to the items subtotal |
 
 ### SummarySmall
 
