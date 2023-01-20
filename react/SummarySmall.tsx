@@ -9,6 +9,7 @@ import SummaryContextProvider from './SummaryContext'
 interface Props {
   totalizers: Totalizer[]
   total: number
+  originalTotal?: number
   totalizersToShow?: string[]
   totalCalculation?: 'visibleTotalizers' | 'allTotalizers'
   paymentData: PaymentData
@@ -18,6 +19,7 @@ const CSS_HANDLES = ['summarySmallContent', 'summarySmallDisclaimer'] as const
 
 function SummarySmall({
   total,
+  originalTotal = 0,
   children,
   totalizers,
   totalizersToShow = ['Items'],
@@ -43,6 +45,7 @@ function SummarySmall({
     <SummaryContextProvider
       totalizers={filteredTotalizers}
       total={totalToDisplay}
+      originalTotal={originalTotal}
       paymentData={paymentData}
     >
       <div className={`${handles.summarySmallContent} c-on-base`}>

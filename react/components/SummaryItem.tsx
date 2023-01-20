@@ -33,15 +33,17 @@ interface Props {
   name?: string
   large: boolean
   value: number | null
+  originalValue?: number
 }
 
 const CSS_HANDLES = [
   'summaryItemContainer',
   'summaryItemLabel',
   'summaryItemPrice',
+  'summaryItemOriginalPrice',
 ] as const
 
-function SummaryItem({ label, name, large, value }: Props) {
+function SummaryItem({ label, name, large, value, originalValue = 0 }: Props) {
   const handles = useCssHandles(CSS_HANDLES)
   const itemId = slugify(label)
 
@@ -60,6 +62,16 @@ function SummaryItem({ label, name, large, value }: Props) {
             <FormattedMessage id={`store/checkout-summary.${label}`} />
           ))}
       </div>
+      {itemId === 'items' && value && originalValue > value && (
+        <div
+          id="original-items-price"
+          className={`flex-auto tr c-danger strike ${
+            handles.summaryItemOriginalPrice
+          } ${large ? 'fw6 fw5-l' : ''}`}
+        >
+          <FormattedPrice value={originalValue / 100} />
+        </div>
+      )}
       <div
         id={`${itemId}-price`}
         className={`flex-auto tr ${handles.summaryItemPrice} ${

@@ -63,7 +63,7 @@ Therefore, in order to customize the Checkout Summary configuration, you can sim
 For more information on which props you need to pass to the Summary component, [see below](#components).
 
 This app exports all of the following blocks. You can see more detailed information of the
-`checkout-summary` and `checkout-summary.compact` blocks in the [Components](#components) section.
+`checkout-summary`, `checkout-summary.compact`, and `summary-totalizers` blocks in the [Components](#components) section.
 
 ```jsonc
 {
@@ -80,7 +80,8 @@ This app exports all of the following blocks. You can see more detailed informat
   "summary-totalizers": {
     "props": {
       "showTotal": true,
-      "showDeliveryTotal": true
+      "showDeliveryTotal": true,
+      "showOriginalTotal": false
     }
   },
   "summary-coupon": {
@@ -117,6 +118,20 @@ Notice the following: the block declared as children of the `drawer-trigger` blo
 }
 ```
 
+## Components
+
+### SummaryTotalizers
+
+The component rendered when the `summary-totalizers` block is used.
+
+#### Props
+
+| Prop name           | Type      | Default | Description                                                                                      |
+| ------------------- | --------- | ------- | ------------------------------------------------------------------------------------------------ |
+| `showTotal`         | `boolean` | `true`  | Whether to display the overall order total                                                       |
+| `showDeliveryTotal` | `boolean` | `true`  | Whether to display the shipping/delivery total                                                   |
+| `showOriginalTotal` | `boolean` | `false` | Whether to display the original items value (sum of item list prices) next to the items subtotal |
+
 ### SummarySmall
 
 The component rendered when used the `checkout-summary.compact` block.
@@ -151,7 +166,7 @@ Controls how the `Total` shown in the bottom of the summary is calculated. Possi
 Id of the totalizers that should be displayed inside this component, e.g.:
 
 ```js
-[
+;[
   // Value of the subtotal
   'Items',
   // Delivery value
@@ -160,45 +175,48 @@ Id of the totalizers that should be displayed inside this component, e.g.:
 ```
 
 ### SummaryInstallments
+
 The component rendered when used the `summary-installments` block. Renders the product installments. If more than one option is available, the one with the biggest number of installments will be displayed.
 
 #### Props
 
-| Prop name          | Type      |  Description | Default value |
-| --------------------| ----------|--------------|---------------|
-| `markers`           |`[string]` | IDs of your choosing to identify the block's rendered message and customize it using the admin's Site Editor. Learn how to use them accessing the documentation on [Using the Markers prop to customize a block's message](https://vtex.io/docs/recipes/style/using-the-markers-prop-to-customize-a-blocks-message). Notice the following: a block's message can also be customized in the Store Theme source code using the `message` prop. |`[]`|
-|  `blockClass`  |  `string`  |  Block  ID  of your choosing to  be  used  in [CSS  customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization#using-the-blockclass-property).  |  `undefined`  |
-|  `message`  |  `string`  |  Defines the block's default text i.e. the block message. You can also define which text message a block will render on the UI using the admin's Site Editor.  |  `undefined`  |
+| Prop name    | Type       | Description                                                                                                                                                                                                                                                                                                                                                                                                                                  | Default value |
+| ------------ | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
+| `markers`    | `[string]` | IDs of your choosing to identify the block's rendered message and customize it using the admin's Site Editor. Learn how to use them accessing the documentation on [Using the Markers prop to customize a block's message](https://vtex.io/docs/recipes/style/using-the-markers-prop-to-customize-a-blocks-message). Notice the following: a block's message can also be customized in the Store Theme source code using the `message` prop. | `[]`          |
+| `blockClass` | `string`   | Block ID of your choosing to be used in [CSS customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization#using-the-blockclass-property).                                                                                                                                                                                                                                                                     | `undefined`   |
+| `message`    | `string`   | Defines the block's default text i.e. the block message. You can also define which text message a block will render on the UI using the admin's Site Editor.                                                                                                                                                                                                                                                                                 | `undefined`   |
 
 #### Message variables
-| Message variables | Type | Description |
-| --- | --- | --- |
-| `installmentsNumber` | `string` | Number of installments. |
-| `installmentValue` | `string` | Value of each installment. |
-| `installmentsTotalValue` | `string` | Total value of installments. |
-| `interestRate` | `string` | Interest rate. |
-| `paymentSystemName` | `string` | Payment System of the installments. |
-| `hasInterest` | `boolean` | Whether the installments have interest (`true`) or not (`false`). |
+
+| Message variables        | Type      | Description                                                       |
+| ------------------------ | --------- | ----------------------------------------------------------------- |
+| `installmentsNumber`     | `string`  | Number of installments.                                           |
+| `installmentValue`       | `string`  | Value of each installment.                                        |
+| `installmentsTotalValue` | `string`  | Total value of installments.                                      |
+| `interestRate`           | `string`  | Interest rate.                                                    |
+| `paymentSystemName`      | `string`  | Payment System of the installments.                               |
+| `hasInterest`            | `boolean` | Whether the installments have interest (`true`) or not (`false`). |
 
 ## Customization
 
 In order to apply CSS customizations in this and other blocks, follow the instructions given in the recipe on [Using CSS Handles for store customization](https://vtex.io/docs/recipes/style/using-css-handles-for-store-customization).
 
-| CSS Handles              |
-| ------------------------ |
-| `installments`           |
-| `installmentsNumber`     |
-| `installmentValue`       |
-| `installmentsTotalValue` |
-| `interestRate`           |
-| `paymentSystemName`      |
-| `summaryTitle`           |
-| `summaryContent`         |
-| `summarySmallContent`    |
-| `summarySmallDisclaimer` |
-| `summaryItemContainer`   |
-| `summaryItemLabel`       |
-| `summaryItemPrice`       |
+| CSS Handles                |
+| -------------------------- |
+| `installments`             |
+| `installmentsNumber`       |
+| `installmentValue`         |
+| `installmentsTotalValue`   |
+| `interestRate`             |
+| `paymentSystemName`        |
+| `summaryTitle`             |
+| `summaryContent`           |
+| `summarySmallContent`      |
+| `summarySmallDisclaimer`   |
+| `summaryItemContainer`     |
+| `summaryItemLabel`         |
+| `summaryItemPrice`         |
+| `summaryItemOriginalPrice` |
 
 ## Contributors ✨
 
