@@ -1,0 +1,14 @@
+{
+  "store/checkout-summary.Discounts": "Descontos",
+  "store/checkout-summary.Tax": "Taxas",
+  "store/checkout-summary.Items": "Subtotal",
+  "store/checkout-summary.Shipping": "Entrega",
+  "store/checkout-summary.Summary": "Resumo",
+  "store/checkout-summary.Total": "Total",
+  "store/checkout-summary.disclaimer": "Taxas e frete calculados no carrinho",
+  "admin/editor.checkout-summary.label": "Resumo",
+  "admin/editor.checkout-summary.title": "Título",
+  "store/checkout-summary.installments.default": "Em até {installmentsNumber}x {installmentValue}{hasInterest, select, true {, {interestRate} de juros} false { sem juros}}",
+  "admin/editor.checkout-summary.installments.description": "Valores disponiveis para interpolação: '{installmentsNumber}, {installmentValue}, {installmentsTotalValue}, {interestRate}, {hasInterest}, {paymentSystemName}'",
+  "admin/editor.checkout-summary.installments.title": "Parcelamento"
+}

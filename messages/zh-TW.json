@@ -1,0 +1,14 @@
+{
+  "store/checkout-summary.Discounts": "折扣",
+  "store/checkout-summary.Tax": "稅費",
+  "store/checkout-summary.Items": "小計",
+  "store/checkout-summary.Shipping": "送貨",
+  "store/checkout-summary.Summary": "摘要",
+  "store/checkout-summary.Total": "總計",
+  "store/checkout-summary.disclaimer": "購物車中商品計算所得的配送和稅收",
+  "admin/editor.checkout-summary.label": "摘要",
+  "admin/editor.checkout-summary.title": "標題",
+  "store/checkout-summary.installments.default": "最高 {installmentsNumber}x {installmentValue}{hasInterest, select, true {, {interestRate} of interest} false { interest-free}}",
+  "admin/editor.checkout-summary.installments.description": "可用於插值的值：'{installmentsNumber}, {installmentValue}, {installmentsTotalValue}, {interestRate}, {hasInterest}, {paymentSystemName}'",
+  "admin/editor.checkout-summary.installments.title": "分期"
+}
