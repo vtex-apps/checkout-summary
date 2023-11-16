@@ -4,6 +4,7 @@
   "store/checkout-summary.Items": "소계",
   "store/checkout-summary.Shipping": "배달",
   "store/checkout-summary.Summary": "요약",
+  "store/checkout-summary.Fleg": "Taxa de ambalare",
   "store/checkout-summary.Total": "총액",
   "store/checkout-summary.disclaimer": "장바구니에서 계산되는 배송 및 세금입니다.",
   "admin/editor.checkout-summary.label": "요약",

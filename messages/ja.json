@@ -4,6 +4,7 @@
   "store/checkout-summary.Items": "小計",
   "store/checkout-summary.Shipping": "配送",
   "store/checkout-summary.Summary": "サマリ",
+  "store/checkout-summary.Fleg": "Taxa de ambalare",
   "store/checkout-summary.Total": "合計",
   "store/checkout-summary.disclaimer": "送料と税金はカートで計算されます。",
   "admin/editor.checkout-summary.label": "サマリ",

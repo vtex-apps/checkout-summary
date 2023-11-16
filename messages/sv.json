@@ -4,6 +4,7 @@
   "store/checkout-summary.Items": "Delbelopp",
   "store/checkout-summary.Shipping": "Leverans",
   "store/checkout-summary.Summary": "Summering",
+  "store/checkout-summary.Fleg": "Taxa de ambalare",
   "store/checkout-summary.Total": "Totalt",
   "store/checkout-summary.disclaimer": "Frakt och moms beräknas i kundvagnen.",
   "admin/editor.checkout-summary.label": "Summering",

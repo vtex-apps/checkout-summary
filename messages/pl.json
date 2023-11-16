@@ -4,6 +4,7 @@
   "store/checkout-summary.Items": "Podsuma",
   "store/checkout-summary.Shipping": "Dostawa",
   "store/checkout-summary.Summary": "Podsumowanie",
+  "store/checkout-summary.Fleg": "Taxa de ambalare",
   "store/checkout-summary.Total": "Suma",
   "store/checkout-summary.disclaimer": "Wysyłka i podatki obliczone w Koszyku.",
   "admin/editor.checkout-summary.label": "Podsumowanie",

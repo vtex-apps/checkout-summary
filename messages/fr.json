@@ -4,6 +4,7 @@
   "store/checkout-summary.Items": "Sous-total",
   "store/checkout-summary.Shipping": "Livraison",
   "store/checkout-summary.Summary": "Résumé",
+  "store/checkout-summary.Fleg": "Taxa de ambalare",
   "store/checkout-summary.Total": "Total",
   "store/checkout-summary.disclaimer": "Les frais d’expédition et les taxes sont calculés au niveau du panier.",
   "admin/editor.checkout-summary.label": "Résumé",

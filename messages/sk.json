@@ -4,6 +4,7 @@
   "store/checkout-summary.Items": "Medzisúčet",
   "store/checkout-summary.Shipping": "Dodanie",
   "store/checkout-summary.Summary": "Zhrnutie",
+  "store/checkout-summary.Fleg": "Taxa de ambalare",
   "store/checkout-summary.Total": "Celkom",
   "store/checkout-summary.disclaimer": "Poštovné a dane sa počítajú v košíku.",
   "admin/editor.checkout-summary.label": "Zhrnutie",

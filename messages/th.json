@@ -4,6 +4,7 @@
   "store/checkout-summary.Items": "ยอดรวม",
   "store/checkout-summary.Shipping": "การจัดส่ง",
   "store/checkout-summary.Summary": "ภาพรวม",
+  "store/checkout-summary.Fleg": "Taxa de ambalare",
   "store/checkout-summary.Total": "รวมทั้งหมด",
   "store/checkout-summary.disclaimer": "ค่าจัดส่งและภาษีที่คำนวณได้ในรถเข็น",
   "admin/editor.checkout-summary.label": "ภาพรวม",

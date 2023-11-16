@@ -4,6 +4,7 @@
   "store/checkout-summary.Items": "Részösszeg",
   "store/checkout-summary.Shipping": "Kézbesítés",
   "store/checkout-summary.Summary": "Összegzés",
+  "store/checkout-summary.Fleg": "Taxa de ambalare",
   "store/checkout-summary.Total": "Összesen",
   "store/checkout-summary.disclaimer": "A szállítás és adók a kosárban kerülnek kiszámításra.",
   "admin/editor.checkout-summary.label": "Összegzés",

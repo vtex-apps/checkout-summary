@@ -4,6 +4,7 @@
   "store/checkout-summary.Items": "تكلفة الطلب",
   "store/checkout-summary.Shipping": "تكلفة التوصيل",
   "store/checkout-summary.Summary": "الملخص",
+  "store/checkout-summary.Fleg": "Taxa de ambalare",
   "store/checkout-summary.Total": "المجموع",
   "store/checkout-summary.disclaimer": "الشحن والضرائب المحسوبة في سلة التسوق.",
   "admin/editor.checkout-summary.label": "الملخص",

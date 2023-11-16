@@ -4,6 +4,7 @@
   "store/checkout-summary.Items": "Välisumma",
   "store/checkout-summary.Shipping": "Toimitus",
   "store/checkout-summary.Summary": "Yhteenveto",
+  "store/checkout-summary.Fleg": "Taxa de ambalare",
   "store/checkout-summary.Total": "Yhteensä",
   "store/checkout-summary.disclaimer": "Toimituskulut ja verot lasketaan ostoskorissa.",
   "admin/editor.checkout-summary.label": "Yhteenveto",

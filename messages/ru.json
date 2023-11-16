@@ -4,6 +4,7 @@
   "store/checkout-summary.Items": "Промежуточный итог",
   "store/checkout-summary.Shipping": "Доставка",
   "store/checkout-summary.Summary": "Содержание",
+  "store/checkout-summary.Fleg": "Taxa de ambalare",
   "store/checkout-summary.Total": "Всего",
   "store/checkout-summary.disclaimer": "Стоимость доставки и налоги рассчитываются в корзине.",
   "admin/editor.checkout-summary.label": "Содержание",

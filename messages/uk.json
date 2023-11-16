@@ -4,6 +4,7 @@
   "store/checkout-summary.Items": "Проміжний підсумок",
   "store/checkout-summary.Shipping": "Доставка",
   "store/checkout-summary.Summary": "Підсумок",
+  "store/checkout-summary.Fleg": "Taxa de ambalare",
   "store/checkout-summary.Total": "Разом",
   "store/checkout-summary.disclaimer": "Вартість доставлення й податки розраховуються в кошику.",
   "admin/editor.checkout-summary.label": "Підсумок",

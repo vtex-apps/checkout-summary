@@ -4,6 +4,7 @@
   "store/checkout-summary.Items": "Skupaj",
   "store/checkout-summary.Shipping": "Dobava",
   "store/checkout-summary.Summary": "Povzetek",
+  "store/checkout-summary.Fleg": "Taxa de ambalare",
   "store/checkout-summary.Total": "Skupaj",
   "store/checkout-summary.disclaimer": "Dostava in davki, izračunani v košarici.",
   "admin/editor.checkout-summary.label": "Povzetek",

@@ -4,6 +4,7 @@
   "store/checkout-summary.Items": "Subtotal",
   "store/checkout-summary.Shipping": "Lliurament",
   "store/checkout-summary.Summary": "Resum",
+  "store/checkout-summary.Fleg": "Taxa de ambalare",
   "store/checkout-summary.Total": "Total",
   "store/checkout-summary.disclaimer": "Les despeses de lliurament i els impostos es calculen al carretó.",
   "admin/editor.checkout-summary.label": "Resum",

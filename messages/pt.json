@@ -4,6 +4,7 @@
   "store/checkout-summary.Items": "Subtotal",
   "store/checkout-summary.Summary": "Resumo",
   "store/checkout-summary.Shipping": "Entrega",
+  "store/checkout-summary.Fleg": "Taxa de ambalare",
   "store/checkout-summary.Total": "Total",
   "store/checkout-summary.disclaimer": "Taxas e frete calculados no Carrinho",
   "admin/editor.checkout-summary.label": "Resumo",

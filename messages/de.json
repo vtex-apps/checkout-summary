@@ -4,6 +4,7 @@
   "store/checkout-summary.Items": "Zwischensumme",
   "store/checkout-summary.Shipping": "Lieferung",
   "store/checkout-summary.Summary": "Zusammenfassung",
+  "store/checkout-summary.Fleg": "Taxa de ambalare",
   "store/checkout-summary.Total": "Gesamt",
   "store/checkout-summary.disclaimer": "Versandkosten und Steuern werden im Warenkorb berechnet.",
   "admin/editor.checkout-summary.label": "Zusammenfassung",

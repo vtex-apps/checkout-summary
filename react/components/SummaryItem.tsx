@@ -22,6 +22,10 @@ defineMessages({
     id: 'store/checkout-summary.Discounts',
     defaultMessage: 'Discounts',
   },
+  Fleg: {
+    id: 'store/checkout-summary.Fleg',
+    defaultMessage: 'Taxa Ambalare',
+  },
   Tax: {
     id: 'store/checkout-summary.Tax',
     defaultMessage: 'Taxes',

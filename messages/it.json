@@ -4,6 +4,7 @@
   "store/checkout-summary.Items": "Subtotale",
   "store/checkout-summary.Shipping": "Spedizione",
   "store/checkout-summary.Summary": "Riepilogo",
+  "store/checkout-summary.Fleg": "Taxa de ambalare",
   "store/checkout-summary.Total": "Totale",
   "store/checkout-summary.disclaimer": "Tasse e spese di spedizione calcolate nel carrello.",
   "admin/editor.checkout-summary.label": "Riepilogo",
